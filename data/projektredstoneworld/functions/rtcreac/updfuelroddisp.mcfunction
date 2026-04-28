@@ -12,3 +12,9 @@ execute if score #rtcreactormetermode info matches 2 as @e[type=minecraft:text_d
 
 execute if score #rtcreactorctrlrodmode info matches 1 as @e[type=minecraft:text_display,tag=rtcsctrlroddisp] run data modify entity @s text set value '[{"text":"\\n\\n\\n                      █              █\\n\\n\\n\\n\\n\\n\\n\\n      █              █              █              █      \\n\\n\\n\\n\\n\\n\\n\\n      █              █              █              █      \\n\\n\\n\\n\\n\\n\\n\\n                      █              █\\n\\n\\n","bold":true,"color":"#4471af"}]'
 execute if score #rtcreactorctrlrodmode info matches 2..4 as @e[type=minecraft:text_display,tag=rtcsctrlroddisp] run data modify entity @s text set value '[{"text":"\\n\\n\\n                      █              █\\n\\n\\n\\n\\n\\n\\n\\n      █              █              █              █      \\n\\n\\n\\n\\n\\n\\n\\n      █              █              █              █      \\n\\n\\n\\n\\n\\n\\n\\n                      █              █\\n\\n\\n","bold":true,"color":"#9c9513"}]'
+
+
+scoreboard players operation #rtcreactorctrlrodmodep info = #rtcreactorctrlrodmode info
+scoreboard players operation #rtcreactorfuelrodmodep info = #rtcreactorfuelrodmode info
+scoreboard players operation #rtcreactormetermodep info = #rtcreactormetermode info
+
