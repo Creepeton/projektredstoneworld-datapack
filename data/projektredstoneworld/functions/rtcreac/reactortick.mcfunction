@@ -79,7 +79,7 @@ execute if score #rtcreactorcoretemp info matches 2600.. run scoreboard players 
 # Turbine power decreases when pressure goes up (boiling point of water increases, so less steam is produced)
 scoreboard players operation #rtcreactorturbinepowertarget info = #rtcreactorcoretemp info
 scoreboard players remove #rtcreactorturbinepowertarget info 125
-scoreboard players operation #rtcreactorturbinepowertarget info *= 82 CONSTANTS
+scoreboard players operation #rtcreactorturbinepowertarget info *= 140000 CONSTANTS
 scoreboard players operation #rtcreactorintermediate info = #rtcreactorwaterpressure info
 scoreboard players add #rtcreactorintermediate info 1000
 scoreboard players operation #rtcreactorturbinepowertarget info /= #rtcreactorintermediate info
