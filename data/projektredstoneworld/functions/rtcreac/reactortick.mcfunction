@@ -43,8 +43,8 @@ execute if score #rtcreactorcoretemptarget info matches ..50 run scoreboard play
 # Approach core temperature target
 scoreboard players operation #rtcreactorcoretempdelta info = #rtcreactorcoretemptarget info
 scoreboard players operation #rtcreactorcoretempdelta info -= #rtcreactorcoretemp info
-execute if score #rtcreactorcoretempdelta info matches 0 if score #rtcreactorcoretemp info > #rtcreactorcoretemptarget info run scoreboard players remove #rtcreactorcoretemp info 1
-execute if score #rtcreactorcoretempdelta info matches 0 if score #rtcreactorcoretemp info < #rtcreactorcoretemptarget info run scoreboard players add #rtcreactorcoretemp info 1
+execute if score #rtcreactorcoretemp info > #rtcreactorcoretemptarget info run scoreboard players remove #rtcreactorcoretemp info 1
+execute if score #rtcreactorcoretemp info < #rtcreactorcoretemptarget info run scoreboard players add #rtcreactorcoretemp info 1
 
 # Radiation calculations
 scoreboard players operation #rtcreactorintermediate info = #rtcreactorcoretemptarget info
