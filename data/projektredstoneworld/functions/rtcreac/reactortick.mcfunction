@@ -4,6 +4,7 @@
 scoreboard players set #rtcreactorwaterpressuretarget info 22000
 scoreboard players operation #rtcreactorintermediate info = #rtcreactorcoretemp info
 scoreboard players operation #rtcreactorintermediate info *= 11100 CONSTANTS
+execute if score #rtcreactorusepump info matches 0 run scoreboard players set #rtcreactorpumprate info 1
 execute if score #rtcreactorpumprate info matches 0 run scoreboard players set #rtcreactorpumprate info 1
 scoreboard players operation #rtcreactorintermediate info /= #rtcreactorpumprate info
 execute if score #rtcreactorpumprate info matches 1 run scoreboard players set #rtcreactorpumprate info 0
