@@ -13,7 +13,7 @@ scoreboard players operation #rtcreactorintermediate info = #rtcreactorcoretemp 
 scoreboard players operation #rtcreactorintermediate info *= 48 CONSTANTS
 execute if score #rtcreactorintermediate info matches ..17000 run scoreboard players set #rtcreactorintermediate info 17000
 execute if score #rtcreactorintermediate info < #rtcreactorwaterpressuretarget info run scoreboard players operation #rtcreactorwaterpressuretarget info = #rtcreactorintermediate info
-execute if score #rtcreactorwaterpressuretarget info matches ..0 run scoreboard players set #rtcreactorwaterpressuretarget info 0
+execute if score #rtcreactorwaterpressuretarget info matches ..100 run scoreboard players set #rtcreactorwaterpressuretarget info 100
 # Approach water pressure target
 scoreboard players operation #rtcreactorwaterpressuredelta info = #rtcreactorwaterpressuretarget info
 scoreboard players operation #rtcreactorwaterpressuredelta info -= #rtcreactorwaterpressure info
@@ -36,6 +36,12 @@ scoreboard players operation #rtcreactorintermediate info = #rtcreactorwaterpres
 scoreboard players add #rtcreactorintermediate info 45000
 scoreboard players operation #rtcreactorcoretemptarget info *= 60000 CONSTANTS
 scoreboard players operation #rtcreactorcoretemptarget info /= #rtcreactorintermediate info
+# When you have no control rods (me wen me wen)
+scoreboard players operation #rtcreactorintermediate info = #rtcreactorrodheight info
+scoreboard players add #rtcreactorintermediate info 17
+execute if score #rtcreactorintermediate info matches 42.. run scoreboard players set #rtcreactorintermediate info 42
+scoreboard players operation #rtcreactorcoretemptarget info *= 42 CONSTANTS
+scoreboard players operation #rtcreactorcoretemptarget info /= #rtcreactorintermediate info
 
 # Clamp core temperature target
 execute if score #rtcreactorcoretemptarget info matches ..50 run scoreboard players set #rtcreactorcoretemptarget info 50
@@ -46,7 +52,7 @@ scoreboard players operation #rtcreactorcoretempdelta info -= #rtcreactorcoretem
 execute if score #rtcreactorcoretemp info > #rtcreactorcoretemptarget info run scoreboard players remove #rtcreactorcoretemp info 1
 execute if score #rtcreactorcoretemp info < #rtcreactorcoretemptarget info run scoreboard players add #rtcreactorcoretemp info 1
 
-# Radiation calculations
+# ==== RADIATION ====
 scoreboard players operation #rtcreactorintermediate info = #rtcreactorcoretemptarget info
 scoreboard players remove #rtcreactorintermediate info 175
 scoreboard players operation #rtcreactorintermediate info *= 10 CONSTANTS
