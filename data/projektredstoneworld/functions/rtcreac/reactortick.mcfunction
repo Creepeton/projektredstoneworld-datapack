@@ -83,10 +83,10 @@ execute if score #rtcreactorintermediate info matches 650.. run scoreboard playe
 scoreboard players operation #rtcreactorcoretemptarget info *= 650 CONSTANTS
 scoreboard players operation #rtcreactorcoretemptarget info /= #rtcreactorintermediate info
 # xenon effect
-scoreboard players set #rtcreactorintermediate info 30000
+scoreboard players set #rtcreactorintermediate info 20000
 scoreboard players operation #rtcreactorintermediate info -= #rtcreactorxenon info
 scoreboard players operation #rtcreactorcoretemptarget info *= #rtcreactorintermediate info
-scoreboard players operation #rtcreactorcoretemptarget info /= 24500 CONSTANTS
+scoreboard players operation #rtcreactorcoretemptarget info /= 14500 CONSTANTS
 # clamp core temp target minimum based off pump rate
 scoreboard players set #rtcreactorintermediate2 info 1000
 scoreboard players operation #rtcreactorintermediate info = #rtcreactorpumprate info
