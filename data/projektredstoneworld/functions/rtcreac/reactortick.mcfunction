@@ -3,7 +3,7 @@
 # Approach core temperature target
 scoreboard players operation #rtcreactorcoretempdelta info = #rtcreactorcoretemptarget info
 scoreboard players operation #rtcreactorcoretempdelta info -= #rtcreactorcoretemp info
-scoreboard players operation #rtcreactorcoretempdelta info /= 30 CONSTANTS
+scoreboard players operation #rtcreactorcoretempdelta info /= 100 CONSTANTS
 execute if score #rtcreactorcoretempdelta info matches 0 if score #rtcreactorcoretemp info > #rtcreactorcoretemptarget info run scoreboard players remove #rtcreactorcoretemp info 1
 execute if score #rtcreactorcoretempdelta info matches 0 if score #rtcreactorcoretemp info < #rtcreactorcoretemptarget info run scoreboard players add #rtcreactorcoretemp info 1
 scoreboard players operation #rtcreactorcoretemp info += #rtcreactorcoretempdelta info
