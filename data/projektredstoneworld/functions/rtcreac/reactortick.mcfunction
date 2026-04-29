@@ -43,6 +43,17 @@ scoreboard players add #rtcreactorintermediate info 45
 execute if score #rtcreactorintermediate info matches 70.. run scoreboard players set #rtcreactorintermediate info 70
 scoreboard players operation #rtcreactorcoretemptarget info *= 70 CONSTANTS
 scoreboard players operation #rtcreactorcoretemptarget info /= #rtcreactorintermediate info
+# me wen no pumpe
+scoreboard players operation #rtcreactorintermediate info = #rtcreactorpumprate info
+scoreboard players add #rtcreactorintermediate info 250
+# debuff this if core temp is above 1000
+scoreboard players operation #rtcreactorintermediate2 info = #rtcreactorcoretemp info
+scoreboard players remove #rtcreactorintermediate2 info 1000
+scoreboard players operation #rtcreactorintermediate2 info /= 2 CONSTANTS
+execute if score #rtcreactorintermediate2 info matches 500.. run scoreboard players operation #rtcreactorintermediate info += #rtcreactorintermediate2 info
+execute if score #rtcreactorintermediate info matches 650.. run scoreboard players set #rtcreactorintermediate info 650
+scoreboard players operation #rtcreactorcoretemptarget info *= 650 CONSTANTS
+scoreboard players operation #rtcreactorcoretemptarget info /= #rtcreactorintermediate info
 
 # Clamp core temperature target
 execute if score #rtcreactorcoretemptarget info matches ..50 run scoreboard players set #rtcreactorcoretemptarget info 50
