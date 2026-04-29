@@ -10,6 +10,7 @@ scoreboard players operation #rtcreactorwaterpressuretarget info += #rtcreactori
 scoreboard players operation #rtcreactorintermediate info = #rtcreactorwaterpressuretarget info
 scoreboard players operation #rtcreactorintermediate info *= 48 CONSTANTS
 execute if score #rtcreactorintermediate info < #rtcreactorwaterpressuretarget info run scoreboard players operation #rtcreactorwaterpressuretarget info = #rtcreactorintermediate info
+execute if score #rtcreactorwaterpressuretarget info matches ..0 run scoreboard players set #rtcreactorwaterpressuretarget info 0
 # Approach water pressure target
 scoreboard players operation #rtcreactorwaterpressuredelta info = #rtcreactorwaterpressuretarget info
 scoreboard players operation #rtcreactorwaterpressuredelta info -= #rtcreactorwaterpressure info
