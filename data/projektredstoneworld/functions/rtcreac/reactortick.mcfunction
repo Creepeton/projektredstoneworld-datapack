@@ -22,7 +22,7 @@ scoreboard players operation #rtcreactorintermediate info /= #rtcreactorCxenonde
 scoreboard players operation #rtcreactoractualxenon info -= #rtcreactorintermediate info
 # Clamp xenon and iodine values to positive
 execute if score #rtcreactoriodine info matches ..150000 run scoreboard players set #rtcreactoriodine info 150000
-execute if score #rtcreactoractualxenon info matches ..2000000 run scoreboard players set #rtcreactoractualxenon info 2000000
+execute if score #rtcreactoractualxenon info matches ..500000 run scoreboard players set #rtcreactoractualxenon info 500000
 # Derive xenon from actual xenon
 scoreboard players operation #rtcreactorxenon info = #rtcreactoractualxenon info
 scoreboard players operation #rtcreactorxenon info /= 1000 CONSTANTS
@@ -82,6 +82,11 @@ execute if score #rtcreactorintermediate2 info matches 0.. run scoreboard player
 execute if score #rtcreactorintermediate info matches 650.. run scoreboard players set #rtcreactorintermediate info 650
 scoreboard players operation #rtcreactorcoretemptarget info *= 650 CONSTANTS
 scoreboard players operation #rtcreactorcoretemptarget info /= #rtcreactorintermediate info
+# xenon effect
+scoreboard players set #rtcreactorintermediate info 30000
+scoreboard players operation #rtcreactorintermediate info -= #rtcreactorxenon info
+scoreboard players operation #rtcreactorcoretemptarget info *= #rtcreactorintermediate info
+scoreboard players operation #rtcreactorcoretemptarget info /= 24500 CONSTANTS
 # clamp core temp target minimum based off pump rate
 scoreboard players set #rtcreactorintermediate2 info 1000
 scoreboard players operation #rtcreactorintermediate info = #rtcreactorpumprate info
