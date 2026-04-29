@@ -4,7 +4,7 @@
 scoreboard players set #rtcreactorcoretemptarget info 650
 
 # Control rods affect core temperature
-scoreboard players operation #rtcreactorintermediate info = #rtcreactorcontrolrodheight info
+scoreboard players operation #rtcreactorintermediate info = #rtcreactorrodheight info
 scoreboard players operation #rtcreactorintermediate info *= -13 CONSTANTS
 scoreboard players operation #rtcreactorintermediate info /= 2 CONSTANTS
 scoreboard players operation #rtcreactorcoretemptarget info += #rtcreactorintermediate info
