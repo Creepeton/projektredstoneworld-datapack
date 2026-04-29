@@ -33,8 +33,8 @@ scoreboard players operation #rtcreactorintermediate info /= 2 CONSTANTS
 scoreboard players operation #rtcreactorcoretemptarget info += #rtcreactorintermediate info
 # Water pressure
 scoreboard players operation #rtcreactorintermediate info = #rtcreactorwaterpressure info
-scoreboard players add #rtcreactorintermediate info 85000
-scoreboard players operation #rtcreactorcoretemptarget info *= 100000 CONSTANTS
+scoreboard players add #rtcreactorintermediate info 185000
+scoreboard players operation #rtcreactorcoretemptarget info *= 200000 CONSTANTS
 scoreboard players operation #rtcreactorcoretemptarget info /= #rtcreactorwaterpressure info
 
 # Clamp core temperature target
