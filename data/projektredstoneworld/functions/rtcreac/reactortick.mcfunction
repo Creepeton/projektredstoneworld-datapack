@@ -1,5 +1,30 @@
 # Runs every tick that the reactor is loaded
 
+# ==== XENON AND IODINE ====
+# Iodine production
+scoreboard players operation #rtcreactorintermediate2 info = #rtcreactorcoretemp info
+scoreboard players remove #rtcreactorintermediate2 info 125
+execute if score #rtcreactorintermediate2 info matches ..0 run scoreboard players set #rtcreactorintermediate2 info 0
+scoreboard players operation #rtcreactoriodine info += #rtcreactorintermediate2 info
+# Iodine decay
+scoreboard players operation #rtcreactorintermediate info = #rtcreactoriodine info
+scoreboard players operation #rtcreactorintermediate info /= #rtcreactorCiodinedecay info
+scoreboard players operation #rtcreactoriodine info -= #rtcreactorintermediate info
+# Xenon production from iodine decay
+scoreboard players operation #rtcreactorintermediate info *= #rtcreactorCxenonmultiplier info
+scoreboard players operation #rtcreactorintermediate info /= 1000 CONSTANTS
+scoreboard players operation #rtcreactorxenon info += #rtcreactorintermediate info
+# Xenon absorbing neutrons
+scoreboard players operation #rtcreactorintermediate2 info *= #rtcreactorCxenonabsorbency info
+scoreboard players operation #rtcreactorintermediate2 info /= 1000 CONSTANTS
+scoreboard players operation #rtcreactorxenon info -= #rtcreactorintermediate2 info
+# Xenon decay
+scoreboard players operation #rtcreactorintermediate info = #rtcreactorxenon info
+scoreboard players operation #rtcreactorintermediate info /= #rtcreactorCxenondecay info
+scoreboard players operation #rtcreactorxenon info -= #rtcreactorintermediate info
+
+
+
 # ==== WATER PRESSURE ====
 scoreboard players set #rtcreactorwaterpressuretarget info 22000
 scoreboard players operation #rtcreactorintermediate info = #rtcreactorcoretemp info
@@ -91,6 +116,7 @@ execute if score #rtcreactorwaterpressure info matches ..4000 run scoreboard pla
 # Clamp turbine power to 0-6000
 execute if score #rtcreactorturbinepowertarget info matches 6000.. run scoreboard players set #rtcreactorturbinepowertarget info 6000
 execute if score #rtcreactorturbinepowertarget info matches ..0 run scoreboard players set #rtcreactorturbinepowertarget info 0
+execute if score #rtcreactorrodheight info matches 80.. run scoreboard players operation #rtcreactorturbinepowertarget info /= 4 CONSTANTS
 # Make turbine power approach target thru use of delta
 scoreboard players operation #rtcreactorturbinepowerdelta info = #rtcreactorturbinepowertarget info
 scoreboard players operation #rtcreactorturbinepowerdelta info -= #rtcreactorturbinepower info
