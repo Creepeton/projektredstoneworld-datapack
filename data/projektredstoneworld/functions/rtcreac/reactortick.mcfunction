@@ -12,19 +12,20 @@ scoreboard players operation #rtcreactorintermediate info /= #rtcreactorCiodined
 scoreboard players operation #rtcreactoriodine info -= #rtcreactorintermediate info
 # Xenon production from iodine decay
 scoreboard players operation #rtcreactorintermediate info *= #rtcreactorCxenonmultiplier info
-scoreboard players operation #rtcreactorintermediate info /= 1000 CONSTANTS
-scoreboard players operation #rtcreactorxenon info += #rtcreactorintermediate info
+scoreboard players operation #rtcreactoractualxenon info += #rtcreactorintermediate info
 # Xenon absorbing neutrons
 scoreboard players operation #rtcreactorintermediate2 info *= #rtcreactorCxenonabsorbency info
-scoreboard players operation #rtcreactorintermediate2 info /= 1000 CONSTANTS
-scoreboard players operation #rtcreactorxenon info -= #rtcreactorintermediate2 info
+scoreboard players operation #rtcreactoractualxenon info -= #rtcreactorintermediate2 info
 # Xenon decay
 scoreboard players operation #rtcreactorintermediate info = #rtcreactorxenon info
 scoreboard players operation #rtcreactorintermediate info /= #rtcreactorCxenondecay info
-scoreboard players operation #rtcreactorxenon info -= #rtcreactorintermediate info
+scoreboard players operation #rtcreactoractualxenon info -= #rtcreactorintermediate info
 # Clamp xenon and iodine values to positive
 execute if score #rtcreactoriodine info matches ..0 run scoreboard players set #rtcreactoriodine info 0
-execute if score #rtcreactorxenon info matches ..0 run scoreboard players set #rtcreactorxenon info 0
+execute if score #rtcreactoractualxenon info matches ..2000000 run scoreboard players set #rtcreactoractualxenon info 2000000
+# Derive xenon from actual xenon
+scoreboard players operation #rtcreactorxenon info = #rtcreactoractualxenon info
+scoreboard players operation #rtcreactorxenon info /= 1000 CONSTANTS
 
 
 # ==== WATER PRESSURE ====
