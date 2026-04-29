@@ -11,7 +11,7 @@ scoreboard players operation #rtcreactorwaterpressuretarget info -= #rtcreactori
 # Clamp water pressure target
 scoreboard players operation #rtcreactorintermediate info = #rtcreactorcoretemp info
 scoreboard players operation #rtcreactorintermediate info *= 48 CONSTANTS
-execute if score #rtcreactorintermediate info matches ..8500 run scoreboard players set #rtcreactorintermediate info 8500
+execute if score #rtcreactorintermediate info matches ..8500 run scoreboard players set #rtcreactorintermediate info 10000
 execute if score #rtcreactorintermediate info < #rtcreactorwaterpressuretarget info run scoreboard players operation #rtcreactorwaterpressuretarget info = #rtcreactorintermediate info
 execute if score #rtcreactorwaterpressuretarget info matches ..0 run scoreboard players set #rtcreactorwaterpressuretarget info 0
 # Approach water pressure target
@@ -33,8 +33,8 @@ scoreboard players operation #rtcreactorintermediate info /= 2 CONSTANTS
 scoreboard players operation #rtcreactorcoretemptarget info += #rtcreactorintermediate info
 # Water pressure
 scoreboard players operation #rtcreactorintermediate info = #rtcreactorwaterpressure info
-scoreboard players add #rtcreactorintermediate info 45000
-scoreboard players operation #rtcreactorcoretemptarget info *= 60000 CONSTANTS
+scoreboard players add #rtcreactorintermediate info 85000
+scoreboard players operation #rtcreactorcoretemptarget info *= 100000 CONSTANTS
 scoreboard players operation #rtcreactorcoretemptarget info /= #rtcreactorwaterpressure info
 
 # Clamp core temperature target
