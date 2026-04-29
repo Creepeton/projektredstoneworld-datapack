@@ -38,9 +38,9 @@ scoreboard players operation #rtcreactorcoretemptarget info *= 60000 CONSTANTS
 scoreboard players operation #rtcreactorcoretemptarget info /= #rtcreactorintermediate info
 # When you have no control rods (me wen me wen)
 scoreboard players operation #rtcreactorintermediate info = #rtcreactorrodheight info
-scoreboard players add #rtcreactorintermediate info 55
-execute if score #rtcreactorintermediate info matches 80.. run scoreboard players set #rtcreactorintermediate info 80
-scoreboard players operation #rtcreactorcoretemptarget info *= 80 CONSTANTS
+scoreboard players add #rtcreactorintermediate info 45
+execute if score #rtcreactorintermediate info matches 70.. run scoreboard players set #rtcreactorintermediate info 70
+scoreboard players operation #rtcreactorcoretemptarget info *= 70 CONSTANTS
 scoreboard players operation #rtcreactorcoretemptarget info /= #rtcreactorintermediate info
 
 # Clamp core temperature target
