@@ -12,14 +12,16 @@ scoreboard players operation #rtcreactorintermediate info /= #rtcreactorCiodined
 scoreboard players operation #rtcreactoriodine info -= #rtcreactorintermediate info
 # Xenon production from iodine decay
 scoreboard players operation #rtcreactorintermediate info *= #rtcreactorCxenonmultiplier info
-scoreboard players operation #rtcreactoractualxenon info += #rtcreactorintermediate info
+scoreboard players operation #rtcreactorxedelta info = #rtcreactorintermediate info
 # Xenon absorbing neutrons
 scoreboard players operation #rtcreactorintermediate2 info *= #rtcreactorCxenonabsorbency info
-scoreboard players operation #rtcreactoractualxenon info -= #rtcreactorintermediate2 info
+scoreboard players operation #rtcreactorxedelta info -= #rtcreactorintermediate2 info
 # Xenon decay
 scoreboard players operation #rtcreactorintermediate info = #rtcreactoractualxenon info
 scoreboard players operation #rtcreactorintermediate info /= #rtcreactorCxenondecay info
-scoreboard players operation #rtcreactoractualxenon info -= #rtcreactorintermediate info
+scoreboard players operation #rtcreactorxedelta info -= #rtcreactorintermediate info
+# change xenon if delta is > 0.25 mg/t
+execute unless score #rtcreactorxedelta matches -250..250 run scoreboard players operation #rtcreactoractualxenon info += #rtcreactorxedelta info
 # Clamp xenon and iodine values to positive
 execute if score #rtcreactoriodine info matches ..0 run scoreboard players set #rtcreactoriodine info 0
 execute if score #rtcreactoractualxenon info matches ..0 run scoreboard players set #rtcreactoractualxenon info 0
