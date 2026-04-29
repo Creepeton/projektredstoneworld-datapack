@@ -30,6 +30,9 @@ scoreboard players operation #rtcreactorintermediate info = #rtcreactorrodheight
 scoreboard players operation #rtcreactorintermediate info *= -13 CONSTANTS
 scoreboard players operation #rtcreactorintermediate info /= 2 CONSTANTS
 scoreboard players operation #rtcreactorcoretemptarget info += #rtcreactorintermediate info
+# Water pressure
+scoreboard players operation #rtcreactorcoretemptarget info *= 15000 CONSTANTS
+scoreboard players operation #rtcreactorcoretemptarget info /= #rtcreactorwaterpressure info
 
 # Clamp core temperature target
 execute if score #rtcreactorcoretemptarget info matches ..50 run scoreboard players set #rtcreactorcoretemptarget info 50
