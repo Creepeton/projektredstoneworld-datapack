@@ -22,7 +22,9 @@ scoreboard players operation #rtcreactorxenon info -= #rtcreactorintermediate2 i
 scoreboard players operation #rtcreactorintermediate info = #rtcreactorxenon info
 scoreboard players operation #rtcreactorintermediate info /= #rtcreactorCxenondecay info
 scoreboard players operation #rtcreactorxenon info -= #rtcreactorintermediate info
-
+# Clamp xenon and iodine values to positive
+execute if score #rtcreactoriodine info matches ..0 run scoreboard players set #rtcreactoriodine info 0
+execute if score #rtcreactorxenon info matches ..0 run scoreboard players set #rtcreactorxenon info 0
 
 
 # ==== WATER PRESSURE ====
