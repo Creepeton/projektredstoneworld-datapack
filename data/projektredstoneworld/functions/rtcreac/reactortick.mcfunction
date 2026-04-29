@@ -74,6 +74,29 @@ execute if score #rtcreactorcoretemp info < #rtcreactorcoretemptarget info run s
 # Clamp core temperature to a maximum of 2600
 execute if score #rtcreactorcoretemp info matches 2600.. run scoreboard players set #rtcreactorcoretemp info 2600
 
+# ==== TURBINE POWER ====
+# Turbine power increases when reactor temperature goes up
+# Turbine power decreases when pressure goes up (boiling point of water increases, so less steam is produced)
+scoreboard players operation #rtcreactorturbinepowertarget info = #rtcreactorcoretemp info
+scoreboard players remove #rtcreactorturbinepowertarget info 125
+scoreboard players operation #rtcreactorturbinepowertarget info *= 82 CONSTANTS
+scoreboard players operation #rtcreactorintermediate info = #rtcreactorwaterpressure info
+scoreboard players add #rtcreactorintermediate info 1000
+scoreboard players operation #rtcreactorturbinepowertarget info /= #rtcreactorintermediate info
+# Not enough pressure to generate steam
+execute if score #rtcreactorwaterpressure info matches ..4000 run scoreboard players set #rtcreactorturbinepowertarget info 0
+# Clamp turbine power to 0-6000
+execute if score #rtcreactorturbinepowertarget info matches 6000.. run scoreboard players set #rtcreactorturbinepowertarget info 6000
+execute if score #rtcreactorturbinepowertarget info matches ..0 run scoreboard players set #rtcreactorturbinepowertarget info 0
+# Make turbine power approach target thru use of delta
+scoreboard players operation #rtcreactorturbinepowerdelta info = #rtcreactorturbinepowertarget info
+scoreboard players operation #rtcreactorturbinepowerdelta info -= #rtcreactorturbinepower info
+scoreboard players operation #rtcreactorturbinepowerdelta info /= 100 CONSTANTS
+execute if score #rtcreactorturbinepowerdelta info matches 0 if score #rtcreactorturbinepower info > #rtcreactorturbinepowertarget info run scoreboard players remove #rtcreactorturbinepower info 1
+execute if score #rtcreactorturbinepowerdelta info matches 0 if score #rtcreactorturbinepower info < #rtcreactorturbinepowertarget info run scoreboard players add #rtcreactorturbinepower info 1
+scoreboard players operation #rtcreactorturbinepower info += #rtcreactorturbinepowerdelta info
+
+
 # ==== RADIATION ====
 scoreboard players operation #rtcreactorintermediate info = #rtcreactorcoretemptarget info
 scoreboard players remove #rtcreactorintermediate info 175
