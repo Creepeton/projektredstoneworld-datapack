@@ -9,6 +9,7 @@ execute if score #rtcreactorrodheight info matches 10..29 if score #rtcreactorco
 
 # Fuel rod display modes
 execute if score #rtcreactorcoretemp info matches ..500 run scoreboard players set #rtcreactorfuelrodmode info 1
+execute if score #rtcreactorfuelmode info matches 1 run scoreboard players set #rtcreactorfuelrodmode info 4
 execute if score #rtcreactorcoretemp info matches 501..900 run scoreboard players set #rtcreactorfuelrodmode info 2
 execute if score #rtcreactorcoretemp info matches 901.. run scoreboard players set #rtcreactorfuelrodmode info 3
 
