@@ -14,3 +14,4 @@ scoreboard players set #rtcreactorfuelmode info 0
 
 playsound minecraft:entity.generic.extinguish_fire master @a[tag=inrtcreactor] ~ ~ ~ 360 1 1
 
+execute if score #rtcreactoreccstime info matches 1 run scoreboard players set #rtcreactorpumprate info 500
