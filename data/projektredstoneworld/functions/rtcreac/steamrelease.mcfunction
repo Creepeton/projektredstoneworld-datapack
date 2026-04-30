@@ -6,4 +6,7 @@ execute if score #rtcreactorwaterpressure info matches 5000.. run scoreboard pla
 
 playsound minecraft:entity.generic.extinguish_fire master @a[tag=inrtcreactor] ~ ~ ~ 360 2 1
 
+scoreboard players remove #rtcreactorturbinepower info 100
+execute if score #rtcreactorturbinepower info matches ..0 run scoreboard players set #rtcreactorturbinepower info 0
+
 scoreboard players remove #rtcreactorsteamrelease info 1
