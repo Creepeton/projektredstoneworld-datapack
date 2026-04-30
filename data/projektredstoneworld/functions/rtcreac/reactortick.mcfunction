@@ -102,9 +102,9 @@ execute if score #rtcreactorfuelmode info matches 0 run scoreboard players set #
 execute if score #rtcreactorfuelmode info matches 1 run scoreboard players set #rtcreactorintermediate info 3
 scoreboard players operation #rtcreactorcoretemptarget info *= #rtcreactorintermediate info
 # scale 4
-execute if score #rtcreactorboric info matches 1 run scoreboard players set #rtcreactorintermediate info 5
-execute if score #rtcreactorboric info matches 2 run scoreboard players set #rtcreactorintermediate info 4
-execute if score #rtcreactorboric info matches 3 run scoreboard players set #rtcreactorintermediate info 3
+execute if score #rtcreactorboric info matches 0 run scoreboard players set #rtcreactorintermediate info 5
+execute if score #rtcreactorboric info matches 1 run scoreboard players set #rtcreactorintermediate info 4
+execute if score #rtcreactorboric info matches 2 run scoreboard players set #rtcreactorintermediate info 3
 scoreboard players operation #rtcreactorcoretemptarget info *= #rtcreactorintermediate info
 # scale 5
 execute if score #rtcreactorwatermode info matches 0 run scoreboard players set #rtcreactorintermediate info 1
