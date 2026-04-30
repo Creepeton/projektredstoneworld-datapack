@@ -186,4 +186,4 @@ execute if score #radrtcreactoraddfrac info matches ..-1 run scoreboard players 
 # ==== ECCS ====
 execute if score #rtcreactoreccstime info matches 1.. run scoreboard players remove #rtcreactoreccstime info 1
 execute if score #rtcreactoreccscooldown info matches 1.. run scoreboard players remove #rtcreactoreccscooldown info 1
-execute if score #rtcreactoreccstime info matches 1.. run function projektredstoneworld:/rtcreac/eccs
+execute if score #rtcreactoreccstime info matches 1.. run function projektredstoneworld:rtcreac/eccs
