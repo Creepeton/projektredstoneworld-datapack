@@ -34,14 +34,14 @@ scoreboard players operation #rtcreactorstability info += #rtcreactorintermediat
 scoreboard players operation #rtcreactorintermediate info = #rtcreactorxenon info
 scoreboard players remove #rtcreactorintermediate info 7000
 execute if score #rtcreactorintermediate info matches ..0 run scoreboard players set #rtcreactorintermediate info 0
-scoreboard players operation #rtcreactorintermediate info /= 40 CONSTANTS
+scoreboard players operation #rtcreactorintermediate info /= 100 CONSTANTS
 scoreboard players operation #rtcreactorstability info -= #rtcreactorintermediate info
 # if xenon <4500 remove stability
 scoreboard players operation #rtcreactorintermediate info = #rtcreactorxenon info
 scoreboard players remove #rtcreactorintermediate info 4500
 execute if score #rtcreactorintermediate info matches 0.. run scoreboard players set #rtcreactorintermediate info 0
 execute if score #rtcreactorcoretemp info matches ..250 run scoreboard players set #rtcreactorintermediate info 0
-scoreboard players operation #rtcreactorintermediate info /= 40 CONSTANTS
+scoreboard players operation #rtcreactorintermediate info /= 100 CONSTANTS
 scoreboard players operation #rtcreactorstability info += #rtcreactorintermediate info
 # if core temperature >400 remove stability
 scoreboard players operation #rtcreactorintermediate info = #rtcreactorcoretemp info
