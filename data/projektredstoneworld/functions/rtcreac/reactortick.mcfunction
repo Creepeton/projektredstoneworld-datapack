@@ -181,3 +181,9 @@ execute if score #rtcreactorwatermode info matches 0 run scoreboard players oper
 scoreboard players operation #radrtcreactoraddfrac info += #rtcreactorintermediate info
 
 execute if score #radrtcreactoraddfrac info matches ..-1 run scoreboard players set #radrtcreactoraddfrac info 0
+
+
+# ==== ECCS ====
+execute if score #rtcreactoreccstime info matches 0.. run scoreboard players remove #rtcreactoreccstime info 1
+execute if score #rtcreactoreccscooldown info matches 0.. run scoreboard players remove #rtcreactoreccscooldown info 1
+execute if score #rtcreactoreccstime info matches 1.. run function projektredstoneworld:/rtcreac/eccs
