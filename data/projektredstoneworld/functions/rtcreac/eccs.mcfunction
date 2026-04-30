@@ -11,6 +11,7 @@ scoreboard players set #rtcreactorpumprate info 900
 scoreboard players set #rtcreactorusepump info 1
 scoreboard players set #rtcreactorwatermode info 0
 scoreboard players set #rtcreactorfuelmode info 0
+scoreboard players set #rtcreactorboric info 2
 
 playsound minecraft:entity.generic.extinguish_fire master @a[tag=inrtcreactor] ~ ~ ~ 360 1 1
 
