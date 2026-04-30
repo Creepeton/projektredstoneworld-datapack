@@ -2,14 +2,16 @@
 
 # ==== XENON AND IODINE ====
 # Iodine production
+scoreboard players set #rtcreactoriodinechange info 0
 scoreboard players operation #rtcreactorintermediate2 info = #rtcreactorcoretemp info
 scoreboard players remove #rtcreactorintermediate2 info 125
 execute if score #rtcreactorintermediate2 info matches ..0 run scoreboard players set #rtcreactorintermediate2 info 0
-scoreboard players operation #rtcreactoriodine info += #rtcreactorintermediate2 info
+scoreboard players operation #rtcreactoriodinechange info += #rtcreactorintermediate2 info
 # Iodine decay
 scoreboard players operation #rtcreactorintermediate info = #rtcreactoriodine info
 scoreboard players operation #rtcreactorintermediate info /= #rtcreactorCiodinedecay info
-scoreboard players operation #rtcreactoriodine info -= #rtcreactorintermediate info
+scoreboard players operation #rtcreactoriodinechange info -= #rtcreactorintermediate info
+execute unless score #rtcreactoriodinechange info matches -4..4 run scoreboard players operation #rtcreactoriodine info += #rtcreactoriodinechange info
 # Xenon production from iodine decay
 scoreboard players operation #rtcreactorintermediate info *= #rtcreactorCxenonmultiplier info
 scoreboard players operation #rtcreactorxedelta info = #rtcreactorintermediate info
