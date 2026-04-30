@@ -62,7 +62,6 @@ scoreboard players remove #rtcreactorintermediate info 400
 execute if score #rtcreactorintermediate info matches ..0 run scoreboard players set #rtcreactorintermediate info 0
 scoreboard players operation #rtcreactorintermediate info /= 2 CONSTANTS
 scoreboard players operation #rtcreactorstability info -= #rtcreactorintermediate info
-tellraw @a [{"text":"my ass g irlfrifnd named TEMPERATEURE OF MY ANUS pregnant"},{"score":{"name":"#rtcreactorstability","objective":"info"}}]
 
 # if turbine power >1700 remove stability
 scoreboard players operation #rtcreactorintermediate info = #rtcreactorturbinepower info
@@ -70,7 +69,6 @@ scoreboard players remove #rtcreactorintermediate info 1700
 execute if score #rtcreactorintermediate info matches ..0 run scoreboard players set #rtcreactorintermediate info 0
 scoreboard players operation #rtcreactorintermediate info /= 24 CONSTANTS
 scoreboard players operation #rtcreactorstability info -= #rtcreactorintermediate info
-tellraw @a [{"text":"my ass g irlfrifnd named AHHHHHHHHH GEORGE BUSH DJ VANCE TROOMP pregnant"},{"score":{"name":"#rtcreactorstability","objective":"info"}}]
 
 # final clamping
 execute if score #rtcreactorstability info matches ..0 run scoreboard players set #rtcreactorstability info 0
