@@ -149,7 +149,7 @@ scoreboard players operation #rtcreactorintermediate info = #rtcreactorwaterpres
 scoreboard players add #rtcreactorintermediate info 1000
 scoreboard players operation #rtcreactorturbinepowertarget info /= #rtcreactorintermediate info
 # Not enough pressure to generate steam
-execute if score #rtcreactorwaterpressure info matches ..4000 run scoreboard players set #rtcreactorturbinepowertarget info 0
+execute if score #rtcreactorwaterpressure info matches ..2000 run scoreboard players set #rtcreactorturbinepowertarget info 0
 # Clamp turbine power to 0-6000
 execute if score #rtcreactorturbinepowertarget info matches 6000.. run scoreboard players set #rtcreactorturbinepowertarget info 6000
 execute if score #rtcreactorturbinepowertarget info matches ..0 run scoreboard players set #rtcreactorturbinepowertarget info 0
