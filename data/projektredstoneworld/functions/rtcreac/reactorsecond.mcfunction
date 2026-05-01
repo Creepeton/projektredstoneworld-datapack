@@ -89,8 +89,8 @@ execute if score #rtcreactorcoretemp info matches ..50 if score #rtcreactorai in
 
 # ==== ADVANCEMENT PROCESSING ====
 # Area related
-advancement grant @a[tag=inrtcreactor] only redstoneworld:reactorenter
-advancement grant @a[x=97,y=-16,z=571,dx=26,dy=18,dz=31] only redstoneworld:reacadmin
+advancement grant @a[tag=inrtcreactor] only redstoneworld:rtcreactorenter
+advancement grant @a[x=97,y=-16,z=571,dx=26,dy=18,dz=31] only redstoneworld:rtcreacadmin
 advancement grant @a[x=115,y=16,z=733,dx=67,dy=20,dz=15] only redstoneworld:rtcturbinehall
 # Radiation levels
 execute if score #radrtcreactor info matches 8 run advancement grant @a[tag=inrtcreactor] only redstoneworld:rtcreacoff
