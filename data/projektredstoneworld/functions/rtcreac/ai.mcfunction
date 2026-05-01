@@ -17,7 +17,7 @@ execute if score #rtcreactorturbinepower info matches 1300.. run scoreboard play
 
 
 # ==== OTHER ====
-scoreboard players set #rtcreactorboric info 2
+scoreboard players set #rtcreactorboric info 1
 scoreboard players set #rtcreactorwatermode info 1
 scoreboard players set #rtcreactorfuelmode info 0
 scoreboard players set #rtcreactorusepump info 1
