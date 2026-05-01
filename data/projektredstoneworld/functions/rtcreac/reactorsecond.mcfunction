@@ -82,4 +82,5 @@ execute if score #rtcreactorstability info matches ..99 if score #rtcreactorstab
 execute unless score #rtcreactorstability info matches 100 run scoreboard players set #rtcreactorstable info 0
 
 # ==== AI ====
-execute unless score #rtcreactorai info matches 0 unless score #rtcreactorstability info matches 100 run function projectredstoneworld:rtcreac/ai
+execute unless score #rtcreactorai info matches 0 unless score #rtcreactorstability info matches 100 run function projektredstoneworld:rtcreac/ai
+execute if score #rtcreactorai info matches 1 if score #rtcreactorstability info matches 100 if score #rtcreactorcoretemp info matches ..140 run function projektredstoneworld:rtcreac/ai
