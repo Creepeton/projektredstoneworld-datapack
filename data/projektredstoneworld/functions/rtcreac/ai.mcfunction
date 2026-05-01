@@ -21,3 +21,5 @@ scoreboard players set #rtcreactorboric info 1
 scoreboard players set #rtcreactorwatermode info 1
 scoreboard players set #rtcreactorfuelmode info 0
 scoreboard players set #rtcreactorusepump info 1
+
+scoreboard players set #rtcreactorusedai info 1
