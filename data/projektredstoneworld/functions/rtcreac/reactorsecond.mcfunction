@@ -84,3 +84,29 @@ execute unless score #rtcreactorstability info matches 100 run scoreboard player
 # ==== AI ====
 execute unless score #rtcreactorai info matches 0 unless score #rtcreactorstability info matches 100 run function projektredstoneworld:rtcreac/ai
 execute if score #rtcreactorai info matches 1 if score #rtcreactorstability info matches 100 if score #rtcreactorcoretemp info matches ..140 run function projektredstoneworld:rtcreac/ai
+execute if score #rtcrectorcoretemp info matches 51.. if score #rtcreactorai info matches 1 run scoreboard players set #rtcreactorusedai info matches 1
+execute if score #rtcreactorcoretemp info matches ..50 if score #rtcreactorai info matches 0 run scoreboard players set #rtcreactorusedai info matches 0
+
+# ==== ADVANCEMENT PROCESSING ====
+# Area related
+advancement grant @a[tag=inrtcreactor] only redstoneworld:reactorenter
+advancement grant @a[x=97,y=-16,z=571,dx=26,dy=18,dz=31] only redstoneworld:reacadmin
+advancement grant @a[x=115,y=16,z=733,dx=67,dy=20,dz=15] only redstoneworld:rtcturbinehall
+# Radiation levels
+execute if score #radrtcreactor info matches 8 run advancement grant @a[tag=inrtcreactor] only redstoneworld:rtcreacoff
+execute if score #radrtcreactor info matches 15000000.. run advancement grant @a[tag=inrtcreactor] only redstoneworld:rtcrad1
+execute if score #radrtcreactor2 info matches 1001.. run advancement grant @a[tag=inrtcreactor] only redstoneworld:rtcrad1
+execute if score #radrtcreactor2 info matches 1001.. run advancement grant @a[tag=inrtcreactor] only redstoneworld:rtcrad2
+execute if score #radrtcreactor2 info matches 10000.. run advancement grant @a[tag=inrtcreactor] only redstoneworld:rtcrad3
+# Other metrics
+execute if score #rtcreacxenon info matches 25000.. run advancement grant @a[x=97,y=-16,z=571,dx=26,dy=18,dz=31] only redstoneworld:rtcxenon
+execute if score #rtcreactorturbinepower info matches 5000.. run advancement grant @a[x=97,y=-16,z=571,dx=26,dy=18,dz=31] only redstoneworld:rtcpowerspike
+execute if score #rtcreactorstability info matches 100 if score #rtcreactorcoretemp info matches 280..370 if score #rtcreactorturbinepower info matches 1000..1500 if score #rtcreactorai info matches 0 if score #rtcreactorusedai info matches 0 run advancement grant @a[x=97,y=-16,z=571,dx=26,dy=18,dz=31] only redstoneworld:rtcstable
+
+# Missing
+# rtcscram
+# rtcaifailure
+# rtcbaddie
+# rtccoolantcover
+# rtclimboenter
+# rtcmeltdown
