@@ -1,3 +1,5 @@
+# Runs every second when the reactor is loaded
+
 # ==== STABILITY CALCULATION ====
 scoreboard players set #rtcreactorstability info 97
 # iodine delta
@@ -76,4 +78,8 @@ execute if score #rtcreactorstability info matches ..0 run scoreboard players se
 execute if score #rtcreactorstability info matches 100 if score #rtcreactorstable info matches 0 run playsound minecraft:block.beacon.ambient master @a[tag=inrtcreactor] ~ ~ ~ 1 2 1
 execute if score #rtcreactorstability info matches 100 if score #rtcreactorstable info matches 0 run tellraw @a[tag=inrtcreactor] [{"text":"THE REACTOR JUST STABILIZED","bold":true,"color":"#00FF00"}]
 execute if score #rtcreactorstability info matches 100 run scoreboard players set #rtcreactorstable info 1
+execute if score #rtcreactorstability info matches ..99 if score #rtcreactorstable info matches 1 run tellraw @a[tag=inrtcreactor] [{"text":"THE REACTOR IS NO LONGER FULLY STABLE","bold":true,"color":"#ff9900"}]
 execute unless score #rtcreactorstability info matches 100 run scoreboard players set #rtcreactorstable info 0
+
+# ==== AI ====
+execute unless score #rtcreactorai info matches 0 unless score #rtcreactorstability info matches 100 run function projectredstoneworld:rtcreac/ai
