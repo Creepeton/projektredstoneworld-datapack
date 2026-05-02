@@ -110,3 +110,13 @@ execute if score #rtcreactorstability info matches 100 if score #rtcreactorcoret
 # rtccoolantcover
 # rtclimboenter
 # rtcmeltdown
+
+
+# ==== AUX POWER MANAGEMENT ====
+# #rtcreactorauxinput should be set from wherever turbine power is split up from, #rtcreactorauxload is the load on the aux battery. Both should be in megawatts
+scoreboard players operation #rtcreactorauxwattage info = #rtcreactorauxinput info
+scoreboard players operation #rtcreactorauxwattage info -= #rtcreactorauxload info
+# Commented out till done
+#execute if score #rtcreactorauxwattage info matches 1.. run function projektredstoneworld:rtcreac/auxcharge
+#execute if score #rtcreactorauxwattage info matches ..-1 run function projektredstoneworld:rtcreac/auxdischarge
+#execute if score #rtcreactorauxwattage info matches 0 run function projektredstoneworld:rtcreac/auxneutral
