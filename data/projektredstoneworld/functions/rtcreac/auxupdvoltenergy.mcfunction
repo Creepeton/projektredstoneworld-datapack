@@ -1,8 +1,7 @@
 # moved from auxcharge
 # Calculate real voltage for display purposes
 scoreboard players operation #rtcreactorauxvoltage info = #rtcreactorauxvoltpercent info
-scoreboard players operation #rtcreactorauxvoltage info *= 500000 CONSTANTS
-scoreboard players operation #rtcreactorauxvoltage info /= 10000 CONSTANTS
+scoreboard players operation #rtcreactorauxvoltage info *= 50 CONSTANTS
 scoreboard players operation #rtcreactorauxkv info = #rtcreactorauxvoltage info
 scoreboard players operation #rtcreactorauxkv info /= 1000 CONSTANTS
 scoreboard players operation #rtcreactorauvkvdecimal info = #rtcreactorauxvoltage info
