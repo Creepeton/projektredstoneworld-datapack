@@ -191,3 +191,10 @@ execute if score #rtcreactoreccstime info matches 1.. run function projektredsto
 
 # ==== STEAM RELEASE ====
 execute if score #rtcreactorsteamrelease info matches 1.. run function projektredstoneworld:rtcreac/steamrelease
+
+
+# Forceload itself if the reactor is in critical state, core temp >500 or radiation > 1 Sv/h or forceload variable on
+forceload remove 90 600
+execute if score #rtcreactorcoretemp info matches 501.. run forceload add 90 600
+execute if score #radrtcreactor2 info matches 1001.. run forceload add 90 600
+execute if score #rtcreactorforceload info matches 1 run forceload add 90 600
