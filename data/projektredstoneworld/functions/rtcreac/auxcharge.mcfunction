@@ -4,8 +4,7 @@
 
 # Voltage is being used as a range 0 to 10000 to represent the percentage to charge, real voltage value is based on 100% = 500 kV
 # V = Vmax - V
-scoreboard players operation #rtcreactorintermediate info = 10000 CONSTANTS
-scoreboard players operation #rtcreactorintermediate info -= #rtcreactorauxvoltpercent info
+scoreboard players set #rtcreactorintermediate info 10000
 
 # Make sure we arent full!
 execute unless score #rtcreactorintermediate info matches 1.. run return fail
