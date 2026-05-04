@@ -7,7 +7,7 @@
 scoreboard players set #rtcreactorintermediate info 10000
 
 # Make sure we arent full!
-execute unless score #rtcreactorintermediate info matches 1.. run return fail
+# execute unless score #rtcreactorintermediate info matches 1.. run return fail
 
 # deltaV = (Vmax - V) * (1-e^(-1/RC)) / scale
 # for charging we're using a constant value of that e part, set to 40.
