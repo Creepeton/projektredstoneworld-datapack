@@ -104,9 +104,7 @@ execute if score #rtcreactorturbinepower info matches 5000.. run advancement gra
 execute if score #rtcreactorstability info matches 100 if score #rtcreactorcoretemp info matches 280..370 if score #rtcreactorturbinepower info matches 1000..1500 if score #rtcreactorai info matches 0 if score #rtcreactorusedai info matches 0 run advancement grant @a[x=97,y=-16,z=571,dx=26,dy=18,dz=31] only redstoneworld:rtcstable
 execute if score #rtcreactorstability info matches 100 if score #rtcreactorcoretemp info matches 280..370 if score #rtcreactorturbinepower info matches 1000..1500 if score #rtcreactorai info matches 0 if score #rtcreactorusedai info matches 0 run scoreboard players set #rtcreactorusedai info 1
 # Missing
-# rtcscram
 # rtcaifailure
-# rtcbaddie
 # rtccoolantcover
 # rtclimboenter
 # rtcmeltdown
