@@ -25,7 +25,7 @@ execute in overworld as @e[type=marker,tag=rcsmanager,x=0,tag=chosenRCS] at @s i
 execute in overworld as @e[type=marker,tag=rcsmanager,x=0,tag=chosenRCS] at @s if score #rcrailghostpodside info matches 1 at @e[type=marker,distance=..15,tag=rcspos] run function projektredstoneworld:spawncarrcrail
 
 # Update random value range if new stations are added
-execute in overworld as @e[type=marker,tag=rcsmanager,x=0,tag=chosenRCS] at @s as @e[type=minecart,distance=..15,tag=rcraildrive,tag=rcrailghost] store result score @s rcsid run random value 0..16
+execute in overworld as @e[type=marker,tag=rcsmanager,x=0,tag=chosenRCS] at @s as @e[type=minecart,distance=..15,tag=rcraildrive,tag=rcrailghost] store result score @s rcsid run random value 0..17
 execute in overworld as @e[type=marker,tag=rcsmanager,x=0,tag=chosenRCS] at @s as @e[type=minecart,distance=..15,tag=rcraildrive,tag=rcrailghost] run function projektredstoneworld:rcrailtransit/applycoords
 
 execute in overworld as @e[type=marker,tag=rcsmanager,x=0,tag=chosenRCS] at @s as @e[type=minecart,distance=..15,tag=rcraildrive,tag=rcrailghost] at @s as @e[type=marker,tag=rcsneg,distance=..2] at @s run function projektredstoneworld:rcrailtransit/handlepowerdepart
