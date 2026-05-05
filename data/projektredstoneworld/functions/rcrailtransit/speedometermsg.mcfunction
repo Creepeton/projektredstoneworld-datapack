@@ -59,7 +59,7 @@ execute if entity @s if score #rcrstationdesttemp info matches 3 run title @s su
 execute if entity @s if score #rcrstationdesttemp info matches 4 run title @s subtitle [{"text":"Destination: ","color":"#AAAAAA"},{"text":"Main Bunker","color":"#E44444"}]
 execute if entity @s if score #rcrstationdesttemp info matches 5 run title @s subtitle [{"text":"Destination: ","color":"#AAAAAA"},{"text":"SMP Base (Dos)","color":"#E44444"}]
 execute if entity @s if score #rcrstationdesttemp info matches 6 run title @s subtitle [{"text":"Destination: ","color":"#AAAAAA"},{"text":"Gerudo Desert","color":"#E44444"}]
-execute if entity @s if score #rcrstationdesttemp info matches 7 run title @s subtitle [{"text":"Destination: ","color":"#AAAAAA"},{"text":"Emil's Villa","color":"#E44444"}]
+execute if entity @s if score #rcrstationdesttemp info matches 7 run title @s subtitle [{"text":"Destination: ","color":"#AAAAAA"},{"text":"Redstone Villa","color":"#E44444"}]
 execute if entity @s if score #rcrstationdesttemp info matches 8 run title @s subtitle [{"text":"Destination: ","color":"#AAAAAA"},{"text":"Rakeport","color":"#E44444"}]
 execute if entity @s if score #rcrstationdesttemp info matches 9 run title @s subtitle [{"text":"Destination: ","color":"#AAAAAA"},{"text":"Founding Island - Spawn","color":"#E44444"}]
 execute if entity @s if score #rcrstationdesttemp info matches 10 run title @s subtitle [{"text":"Destination: ","color":"#AAAAAA"},{"text":"Forgotten Isle","color":"#E44444"}]

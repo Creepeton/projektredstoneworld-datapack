@@ -18,10 +18,15 @@ execute as @a[x=-44,y=69,z=20,dx=2,dy=4,dz=9] run tag @s add rcrailmsg
 execute as @a[x=-26,y=65,z=679,dx=32,dy=5,dz=11] run tag @s add rcrailmsg
 execute as @a[x=446,y=69,z=122,dx=2,dy=4,dz=9] run tag @s add rcrailmsg
 execute as @a[x=2882,y=77,z=661,dx=2,dy=4,dz=9] run tag @s add rcrailmsg
+execute as @a[x=-152,y=66,z=763,dx=22,dy=5,dz=3] run tag @s add rcrailmsg
+#Second side of reborn museum which exists for some reason...
+execute as @a[x=-152,y=66,z=756,dx=22,dy=5,dz=3] run tag @s add rcrailmsg
 # One way stations: Dos Village, SMP Base, Rakeport
 execute as @a[x=-1522,y=98,z=744,dx=2,dy=4,dz=13] run tag @s add rcrailoneway
 execute as @a[x=-1033,y=71,z=729,dx=2,dy=4,dz=9] run tag @s add rcrailoneway
 execute as @a[x=-526,y=73,z=-88,dx=9,dy=4,dz=2] run tag @s add rcrailoneway
+execute as @a[x=-152,y=66,z=763,dx=22,dy=5,dz=3] run tag @s add rcrailoneway
+execute as @a[x=-152,y=66,z=756,dx=22,dy=5,dz=3] run tag @s add rcrailoneway
 # Add the Reborn Museum here when coordinates are determined for both rcrailmsg and rcrailoneway
 
 execute as @a[tag=rcrailmsg] unless score @s rcrailpay matches 1.. run tag @s remove rcrailmsg
