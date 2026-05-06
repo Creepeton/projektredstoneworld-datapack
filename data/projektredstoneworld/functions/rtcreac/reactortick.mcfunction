@@ -11,7 +11,8 @@ scoreboard players operation #rtcreactoriodinechange info += #rtcreactorintermed
 scoreboard players operation #rtcreactorintermediate info = #rtcreactoriodine info
 scoreboard players operation #rtcreactorintermediate info /= #rtcreactorCiodinedecay info
 scoreboard players operation #rtcreactoriodinechange info -= #rtcreactorintermediate info
-execute unless score #rtcreactoriodinechange info matches -3..3 unless score #rtcreactorxenon info matches 6000.. run scoreboard players operation #rtcreactoriodine info += #rtcreactoriodinechange info
+execute unless score #rtcreactoriodinechange info matches -3..3 run scoreboard players operation #rtcreactoriodine info += #rtcreactoriodinechange info
+execute if score #rtcreactorxenon info matches 6000.. if score #rtcreactoriodinechange info matches -3..3 run scoreboard players operation #rtcreactoriodine info += #rtcreactoriodinechange info
 # Xenon production from iodine decay
 scoreboard players operation #rtcreactorintermediate info *= #rtcreactorCxenonmultiplier info
 scoreboard players operation #rtcreactorxedelta info = #rtcreactorintermediate info
@@ -24,7 +25,8 @@ scoreboard players operation #rtcreactorintermediate info /= #rtcreactorCxenonde
 scoreboard players operation #rtcreactorxedelta info -= #rtcreactorintermediate info
 execute if score #rtcreactorcoretemp info matches ..100 if score #rtcreactorxedelta info matches -300..0 run scoreboard players set #rtcreactorxedelta info -300 
 # change xenon if delta is > 0.25 mg/t
-execute unless score #rtcreactorxedelta info matches -250..250 unless score #rtcreactorxenon info matches 6000.. unless score #rtcreactorxenon info matches 4500.. run scoreboard players operation #rtcreactoractualxenon info += #rtcreactorxedelta info
+execute unless score #rtcreactorxedelta info matches -250..250 run scoreboard players operation #rtcreactoractualxenon info += #rtcreactorxedelta info
+execute unless score #rtcreactorxenon info matches 4500..6000 if score #rtcreactorxedelta info matches -250..250 run scoreboard players operation #rtcreactorxenon info += #rtcreactorxedelta info
 # Clamp xenon and iodine values to positive
 execute if score #rtcreactoriodine info matches ..0 run scoreboard players set #rtcreactoriodine info 0
 execute if score #rtcreactoractualxenon info matches ..0 run scoreboard players set #rtcreactoractualxenon info 0
