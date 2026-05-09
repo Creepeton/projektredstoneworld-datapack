@@ -10,7 +10,7 @@ execute unless score #rtcreactorcoretemp info matches ..500 unless score #rtcrea
 
 
 # ==== WATER PRESSURE CONTROLS ====
-execute if score #rtcreactorcoretemp info matches 250..390 run scoreboard players set #rtcreactorpumprate info 500
+#execute if score #rtcreactorcoretemp info matches 250..390 run scoreboard players set #rtcreactorpumprate info 500
 execute if score #rtcreactorwaterpressure info matches ..14400 if score #rtcreactorpumprate info matches ..680 run scoreboard players add #rtcreactorpumprate info 20
 execute if score #rtcreactorwaterpressure info matches 18000.. if score #rtcreactorpumprate info matches 20.. run scoreboard players remove #rtcreactorpumprate info 20
 execute if score #rtcreactorturbinepower info matches 1300.. if score #rtcreactorpumprate info matches ..680 run scoreboard players add #rtcreactorpumprate info 20
