@@ -1,14 +1,19 @@
 # Run as dust marker
 execute unless entity @s[x=-152,y=42,z=891,dx=9,dy=10,dz=8] run return fail
 
-execute at @s positioned ~ ~-0.15 ~ run particle minecraft:dust 0.9 0.9 0.9 0.14 ~ ~ ~ 0.04 0.03 0.04 0.001 1
+# center line
+execute at @s positioned ~ ~-0.15 ~ run particle minecraft:dust 0.9 0.9 0.9 0.13 ~ ~ ~ 0.08 0.04 0.08 0.001 1
 
-execute at @s positioned ~ ~-0.15 ~ positioned ^ ^ ^0.13 run particle minecraft:dust 0.9 0.9 0.9 0.14 ~ ~ ~ 0.04 0.03 0.04 0.001 1
+# small spread
+execute at @s positioned ~ ~-0.15 ~ positioned ^0.18 ^ ^0.13 run particle minecraft:dust 0.9 0.9 0.9 0.13 ~ ~ ~ 0.08 0.04 0.08 0.001 1
+execute at @s positioned ~ ~-0.15 ~ positioned ^-0.18 ^ ^0.13 run particle minecraft:dust 0.9 0.9 0.9 0.13 ~ ~ ~ 0.08 0.04 0.08 0.001 1
 
-execute at @s positioned ~ ~-0.15 ~ positioned ^0.35 ^ ^0.26 run particle minecraft:dust 0.9 0.9 0.9 0.14 ~ ~ ~ 0.05 0.03 0.05 0.001 1
-execute at @s positioned ~ ~-0.15 ~ positioned ^-0.35 ^ ^0.26 run particle minecraft:dust 0.9 0.9 0.9 0.14 ~ ~ ~ 0.05 0.03 0.05 0.001 1
-execute at @s positioned ~ ~-0.15 ~ positioned ^ ^0.22 ^0.26 run particle minecraft:dust 0.9 0.9 0.9 0.14 ~ ~ ~ 0.05 0.03 0.05 0.001 1
-execute at @s positioned ~ ~-0.15 ~ positioned ^ ^-0.22 ^0.26 run particle minecraft:dust 0.9 0.9 0.9 0.14 ~ ~ ~ 0.05 0.03 0.05 0.001 1
+# wider spread farther forward
+execute at @s positioned ~ ~-0.15 ~ positioned ^0.45 ^ ^0.30 run particle minecraft:dust 0.9 0.9 0.9 0.13 ~ ~ ~ 0.10 0.04 0.10 0.001 1
+execute at @s positioned ~ ~-0.15 ~ positioned ^-0.45 ^ ^0.30 run particle minecraft:dust 0.9 0.9 0.9 0.13 ~ ~ ~ 0.10 0.04 0.10 0.001 1
+execute at @s positioned ~ ~-0.15 ~ positioned ^ ^0.28 ^0.30 run particle minecraft:dust 0.9 0.9 0.9 0.13 ~ ~ ~ 0.10 0.04 0.10 0.001 1
+execute at @s positioned ~ ~-0.15 ~ positioned ^ ^-0.28 ^0.30 run particle minecraft:dust 0.9 0.9 0.9 0.13 ~ ~ ~ 0.10 0.04 0.10 0.001 1
+
 
 
 tp @s ^ ^ ^0.4
