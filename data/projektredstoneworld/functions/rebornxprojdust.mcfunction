@@ -5,4 +5,4 @@ tp @s ^ ^ ^0.4
 particle white_ash ~ ~ ~ 0.4 0.3 0.4 0.03 2
 
 # Loop
-execute as @s run function projektredstoneworld:rebornxprojdust
+execute as @s at @s run function projektredstoneworld:rebornxprojdust
