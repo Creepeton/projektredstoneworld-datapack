@@ -42,10 +42,10 @@ jobs:
             if [ "$STATUS" = "success" ]; then
               COLOR=5763719
               TITLE="🚀 Datapack Deployment Succeeded"
-              DESC="Run /minecraft:reload ingame to apply changes."
+              DESC="Run /minecraft:reload ingame to apply changes.\n<@&1507221840987426827>"
             else
               COLOR=15548997
-              TITLE="🔥 Datapack Deployment Failed"
+              TITLE="🔥 Datapack Deployment Failed!\n<@&1507221840987426827>"
               DESC="Status: $STATUS"
             fi
 
