@@ -54,9 +54,9 @@ jobs:
 
           elif [ "$EVENT" = "push" ]; then
             TITLE="📦 New Push"
-            ADDED="${{ github.event.commits[0].added[0] }}"
-            MODIFIED="${{ github.event.commits[0].modified[0] }}"
-            REMOVED="${{ github.event.commits[0].removed[0] }}"
+            ADDED=$(echo '${{ toJson(github.event.commits) }}' | jq '[.[].added | length] | add')
+            MODIFIED=$(echo '${{ toJson(github.event.commits) }}' | jq '[.[].modified | length] | add')
+            REMOVED=$(echo '${{ toJson(github.event.commits) }}' | jq '[.[].removed | length] | add')
             DESC="${{ github.event.head_commit.message }}"
             DESC=$'+'$ADDED' ~'$MODIFIED' -'$REMOVED'\n'"$DESC"
             URL="${{ github.event.head_commit.url }}"
