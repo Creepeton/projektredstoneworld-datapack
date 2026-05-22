@@ -66,7 +66,7 @@ jobs:
             TITLE="📦 New Push"
             DESC="${{ github.event.head_commit.message }}"
             DESC+=$'\n> Files: +'"${ADDED}"' ~'"${MODIFIED}"'  -'"${REMOVED}"''
-            DESC+=$'\n> ↳ Lines: +'"${ADDEDL}"' -'"${REMOVEDL}"''
+            DESC+=$'\n> Lines: +'"${ADDEDL}"' -'"${REMOVEDL}"''
             DESC+=$'\n\nFiles changed:\n'"$FILE_LIST"
             URL="${{ github.event.head_commit.url }}"
 
