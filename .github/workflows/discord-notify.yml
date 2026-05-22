@@ -84,6 +84,7 @@ jobs:
           jq -n \
             --arg title "$TITLE" \
             --arg desc "$DESC" \
+            --arg content "$CONTENT" \
             --arg url "$URL" \
             --arg actor "$ACTOR" \
             --arg avatar "$AVATAR" \
