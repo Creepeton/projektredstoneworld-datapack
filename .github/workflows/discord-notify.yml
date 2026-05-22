@@ -91,7 +91,7 @@ jobs:
             --argjson color "$COLOR" \
             '{
               allowed_mentions: {
-                parse: ["roles"]
+                roles: ["1507221840987426827"]
               },
               embeds: [{
                 title: $title,
