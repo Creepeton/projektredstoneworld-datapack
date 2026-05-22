@@ -63,8 +63,8 @@ jobs:
             REMOVEDL=$(echo "$DATA" | jq '.files[].deletions' | awk '{sum+=$1} END {print sum+0}')
             TITLE="📦 New Push"
             DESC="${{ github.event.head_commit.message }}"
-            DESC+=$'\n> ['"${ADDED}"' + '"${MODIFIED}"' ~ '"${REMOVED}"'] files'
-            DESC+=$'\n> ↳ ['"${ADDEDL}"' - '"${REMOVEDL}"'] lines'
+            DESC+=$'\n> [+'"${ADDED}"' ~'"${MODIFIED}"'  -'"${REMOVED}"'] files'
+            DESC+=$'\n> ↳ [+'"${ADDEDL}"' -'"${REMOVEDL}"'] lines'
             URL="${{ github.event.head_commit.url }}"
 
           elif [ "$EVENT" = "pull_request" ]; then
