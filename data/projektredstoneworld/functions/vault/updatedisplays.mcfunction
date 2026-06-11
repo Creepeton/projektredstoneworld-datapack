@@ -18,4 +18,10 @@ scoreboard players reset #rtcadjstar
 scoreboard players reset #rtcadjdia
 scoreboard players reset #rtcadjem
 
-data merge entity @e[type=text_display,limit=1,tag=rtcvaultdisptot] {text:'[{"text":"Total Value in Vault:","color":"gold","bold":true},{"text":"\\n$","color":"green","bold":true},{"score":{"name":"#totalvaultfund","objective":"info"},"color":"green","bold":true},{"text":"K","color":"green","bold":true}]'}
+scoreboard players operation #totalvaultfundk info = #totalvaultfund info
+scoreboard players operation #totalvaultfundk info %= 1000 CONSTANTS
+scoreboard players operation #totalvaultfund info /= 1000 CONSTANTS
+
+execute if score #totalvaultfundk info matches 0..9 run data merge entity @e[type=text_display,limit=1,tag=rtcvaultdisptot] {text:'[{"text":"Total Value in Vault:","color":"gold","bold":true},{"text":"\\n$","color":"green","bold":true},{"score":{"name":"#totalvaultfund","objective":"info"},"color":"green","bold":true},{"text":".00","color":"green","bold":true},{"score":{"name":"#totalvaultfundk","objective":"info"},"color":"green","bold":true},{"text":" M","color":"green","bold":true}]'}
+execute if score #totalvaultfundk info matches 10..99 run data merge entity @e[type=text_display,limit=1,tag=rtcvaultdisptot] {text:'[{"text":"Total Value in Vault:","color":"gold","bold":true},{"text":"\\n$","color":"green","bold":true},{"score":{"name":"#totalvaultfund","objective":"info"},"color":"green","bold":true},{"text":".0","color":"green","bold":true},{"score":{"name":"#totalvaultfundk","objective":"info"},"color":"green","bold":true},{"text":" M","color":"green","bold":true}]'}
+execute if score #totalvaultfundk info matches 100..999 run data merge entity @e[type=text_display,limit=1,tag=rtcvaultdisptot] {text:'[{"text":"Total Value in Vault:","color":"gold","bold":true},{"text":"\\n$","color":"green","bold":true},{"score":{"name":"#totalvaultfund","objective":"info"},"color":"green","bold":true},{"text":".","color":"green","bold":true},{"score":{"name":"#totalvaultfundk","objective":"info"},"color":"green","bold":true},{"text":" M","color":"green","bold":true}]'}
