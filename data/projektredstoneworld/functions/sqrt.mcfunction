@@ -13,26 +13,26 @@ scoreboard players set #sqrt info 32768
 # Loop 1
 scoreboard players operation #sqrtbound info = #sqrtin info
 scoreboard players operation #sqrtbound info /= #sqrt info
-scoreboard players operation #sqrtbound info += #sqrt info
-scoreboard players operation #sqrtbound info /= 2 CONSTANTS
+scoreboard players operation #sqrt info += #sqrtbound info
+scoreboard players operation #sqrt info /= 2 CONSTANTS
 
 # Loop 2
 scoreboard players operation #sqrtbound info = #sqrtin info
 scoreboard players operation #sqrtbound info /= #sqrt info
-scoreboard players operation #sqrtbound info += #sqrt info
-scoreboard players operation #sqrtbound info /= 2 CONSTANTS
+scoreboard players operation #sqrt info += #sqrtbound info
+scoreboard players operation #sqrt info /= 2 CONSTANTS
 
 # Loop 3
 scoreboard players operation #sqrtbound info = #sqrtin info
 scoreboard players operation #sqrtbound info /= #sqrt info
-scoreboard players operation #sqrtbound info += #sqrt info
-scoreboard players operation #sqrtbound info /= 2 CONSTANTS
+scoreboard players operation #sqrt info += #sqrtbound info
+scoreboard players operation #sqrt info /= 2 CONSTANTS
 
 # Loop 4
 scoreboard players operation #sqrtbound info = #sqrtin info
 scoreboard players operation #sqrtbound info /= #sqrt info
-scoreboard players operation #sqrtbound info += #sqrt info
-scoreboard players operation #sqrtbound info /= 2 CONSTANTS
+scoreboard players operation #sqrt info += #sqrtbound info
+scoreboard players operation #sqrt info /= 2 CONSTANTS
 
 # Divide by clamping factor
 scoreboard players operation #sqrt info /= #sqrtclampfactor info
