@@ -9,7 +9,7 @@ execute if entity @s[x=-39,y=-43,z=642,dx=66,dy=643,dz=65] run tag @s add tagrtc
 execute if entity @s[x=-1,y=69,z=621,dx=39,dy=17,dz=77] run tag @s add tagrtc2bound
 execute if entity @s[x=13,y=71,z=555,dx=42,dy=33,dz=77] run tag @s add tagrtc2bound
 # Underground tunnels
-execute if entity @s[x=-21,y=57,z=575,dx=68,dy=15,dz=81] run tag @s add tagrtc2bound
+execute if entity @s[x=-21,y=57,z=575,dx=68,dy=16,dz=81] run tag @s add tagrtc2bound
 # Reactor
 execute if entity @s[x=5,y=-21,z=569,dx=164,dy=19,dz=72] run tag @s add tagrtc2bound
 # Microbunker
