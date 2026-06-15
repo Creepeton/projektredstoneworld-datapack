@@ -4,7 +4,7 @@
 tag @s remove tagrtc2bound
 # Inclusive areas --
 # Main part of T3.0
-execute if entity @s[x=-39,y=-43,z=642,dx=66,dy=643,dz=65] run tag @s add tagrtc2bound
+execute if entity @s[x=-43,y=-43,z=642,dx=70,dy=643,dz=65] run tag @s add tagrtc2bound
 # Houses outside T3.0
 execute if entity @s[x=-1,y=69,z=621,dx=39,dy=17,dz=77] run tag @s add tagrtc2bound
 execute if entity @s[x=12,y=71,z=555,dx=43,dy=33,dz=77] run tag @s add tagrtc2bound
