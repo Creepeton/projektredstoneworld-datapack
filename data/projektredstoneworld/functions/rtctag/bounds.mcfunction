@@ -7,7 +7,7 @@ tag @s remove tagrtc2bound
 execute if entity @s[x=-39,y=-43,z=642,dx=66,dy=643,dz=65] run tag @s add tagrtc2bound
 # Houses outside T3.0
 execute if entity @s[x=-1,y=69,z=621,dx=39,dy=17,dz=77] run tag @s add tagrtc2bound
-execute if entity @s[x=13,y=71,z=555,dx=42,dy=33,dz=77] run tag @s add tagrtc2bound
+execute if entity @s[x=12,y=71,z=555,dx=43,dy=33,dz=77] run tag @s add tagrtc2bound
 # Underground tunnels
 execute if entity @s[x=-21,y=57,z=575,dx=68,dy=16,dz=81] run tag @s add tagrtc2bound
 # Reactor
