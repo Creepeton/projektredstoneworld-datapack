@@ -16,7 +16,6 @@ execute if entity @s[x=5,y=-21,z=569,dx=164,dy=19,dz=72] run tag @s add tagrtc2b
 execute if entity @s[x=-83,y=-13,z=610,dx=74,dy=14,dz=115] run tag @s add tagrtc2bound
 # Microbunker stairs
 execute if entity @s[x=-39,y=-11,z=630,dx=51,dy=72,dz=27] run tag @s add tagrtc2bound
-execute if entity @s[x=-11,y=16,z=647,dx=12,dy=13,dz=17] run tag @s add tagrtc2bound
 # Floor -1
 execute if entity @s[x=-115,y=2,z=653,dx=137,dy=22,dz=123] run tag @s add tagrtc2bound
 # Exclusive areas --
@@ -26,3 +25,5 @@ execute if entity @s[x=-35,y=62,z=572,dx=47,dy=35,dz=40] run tag @s remove tagrt
 # Reinclusive areas --
 # Bottom part of Tower 3.0
 execute if entity @s[x=-43,y=44,z=613,dx=58,dy=23,dz=57] run tag @s add tagrtc2bound
+# Microbunker stairs
+execute if entity @s[x=-12,y=11,z=644,dx=27,dy=23,dz=16] run tag @s add tagrtc2bound
