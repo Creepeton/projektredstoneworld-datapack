@@ -27,3 +27,4 @@ execute if entity @s[x=-35,y=62,z=572,dx=47,dy=35,dz=40] run tag @s remove tagrt
 execute if entity @s[x=-43,y=44,z=613,dx=58,dy=23,dz=57] run tag @s add tagrtc2bound
 # Microbunker stairs
 execute if entity @s[x=-12,y=11,z=644,dx=27,dy=23,dz=16] run tag @s add tagrtc2bound
+execute if entity @s[x=-8,y=28,z=644,dx=32,dy=28,dz=5] run tag @s add tagrtc2bound
