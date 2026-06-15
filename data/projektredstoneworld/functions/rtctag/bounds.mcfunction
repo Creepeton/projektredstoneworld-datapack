@@ -19,4 +19,5 @@ execute if entity @s[x=-39,y=-11,z=630,dx=51,dy=72,dz=27] run tag @s add tagrtc2
 # Floor -1
 execute if entity @s[x=-115,y=2,z=653,dx=137,dy=22,dz=123] run tag @s add tagrtc2bound
 # Exclusive areas --
-
+# Bottom part of Tower 2
+execute if entity @s[x=-35,y=21,z=562,dx=46,dy=73,dz=98] run tag @s remove tagrtc2bound
