@@ -53,6 +53,7 @@ execute if entity @s[x=-35,y=47,z=398,dx=23,dy=13,dz=22] run tag @s add tagrtcbo
 tag @s[tag=tagrtc2bound] add tagrtcbound
 
 # === FI-RTC ===
+tag @s remove tagfirtcbound
 # Behemoth cuboid
 execute if entity @s[x=-432,y=-66,z=6,dx=520,dy=1167,dz=821] run tag @s add tagfirtcbound
 # Everything within FI-RTC should be within RTC
