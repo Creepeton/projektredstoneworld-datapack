@@ -37,7 +37,7 @@ execute if entity @s[x=-8,y=28,z=644,dx=32,dy=28,dz=5] run tag @s add tagrtc2bou
 tag @s remove tagrtcbound
 # Inclusive areas --
 # Good hunk of T3.0 and T2
-execute if entity @s[x=-69,y=17,z=533,dx=112,dy=600,dz=107] run tag @s add tagrtcbound
+execute if entity @s[x=-69,y=17,z=533,dx=112,dy=600,dz=109] run tag @s add tagrtcbound
 # Most of bridge
 execute if entity @s[x=-50,y=82,z=109,dx=84,dy=64,dz=452] run tag @s add tagrtcbound
 # Club
