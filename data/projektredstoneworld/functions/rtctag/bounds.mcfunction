@@ -32,3 +32,19 @@ execute if entity @s[x=-43,y=44,z=613,dx=58,dy=23,dz=57] run tag @s add tagrtc2b
 # Microbunker stairs
 execute if entity @s[x=-12,y=11,z=644,dx=27,dy=23,dz=16] run tag @s add tagrtc2bound
 execute if entity @s[x=-8,y=28,z=644,dx=32,dy=28,dz=5] run tag @s add tagrtc2bound
+
+# === RTC ===
+tag @s remove tagrtcbound
+# Inclusive areas --
+# Good hunk of T3.0 and T2
+execute if entity @s[x=-69,y=17,z=533,dx=112,dy=600,dz=107] run tag @s add tagrtcbound
+# Most of bridge
+execute if entity @s[x=-50,y=82,z=109,dx=84,dy=64,dz=452] run tag @s add tagrtcbound
+# Club
+execute if entity @s[x=-50,y=-4,z=255,dx=63,dy=30,dz=91] run tag @s add tagrtcbound
+# Secret mall
+execute if entity @s[x=-99,y=-49,z=334,dx=163,dy=56,dz=295] run tag @s add tagrtcbound
+# Mall to T2 stairs
+execute if entity @s[x=-51,y=-45,z=602,dx=29,dy=65,dz=34] run tag @s add tagrtcbound
+# Everything in RTC should be within RTC-2
+tag @s[tag=tagrtc2bound] add tagrtcbound
