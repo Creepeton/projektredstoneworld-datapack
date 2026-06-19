@@ -1,6 +1,6 @@
 tag @s remove pontoka
 execute store result score #tagpcount info if entity @a[tag=pontoka]
-tellraw @a [{"text":"[Tag] ","color":"#FF0055","bold":true}, {"selector":"@s","color":"#FF0055","bold":false},{"text":" has left the game!","color":"#FF0055","bold":false},{"text":" (","color":"#FF0055"},{"score": {"name":"#tagpcount","objective":"info"},"color":"#FF0055","bold":false},{"text":" player(s))","color":"#FF0055","bold":false}]
+tellraw @a [{"text":"[Tag] ","color":"#FF0055","bold":true},{"selector":"@s","color":"#FF0055","bold":false},{"text":" has left the game!","color":"#FF0055","bold":false},{"text":" (","color":"#FF0055"},{"score": {"name":"#tagpcount","objective":"info"},"color":"#FF0055","bold":false},{"text":" player(s))","color":"#FF0055","bold":false}]
 tag @s remove tagfirtcbound
 tag @s remove tagrtc2bound
 tag @s remove tagrtcbound
