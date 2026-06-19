@@ -1,0 +1,1 @@
+execute positioned 282.5 5.0 666.5 as @p[distance=..4] if entity @s[tag=pontoka] run function projektredstoneworld:rtctag/leave
