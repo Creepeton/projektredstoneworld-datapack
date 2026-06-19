@@ -1,1 +1,0 @@
-execute positioned 286.5 4.0 667.5 as @a[distance=..2] if block ~ ~ ~ light_weighted_pressure_plate run function projektredstoneworld:rtctag/join
