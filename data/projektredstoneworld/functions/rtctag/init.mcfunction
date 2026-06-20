@@ -19,4 +19,6 @@ tellraw @a [{"text":"[Tag] ","bold":true,"color":"#FF0055"},{"text":"The runners
 
 execute in minecraft:overworld run tp @a[tag=pontokarun] -12.5 141.0 669.5 -180 0
 
+scoreboard objectives add tagdeathrip deathCount
+
 function projektredstoneworld:rtctag/tagschedule

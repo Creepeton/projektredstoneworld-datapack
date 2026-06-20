@@ -10,6 +10,7 @@ execute if score #tagtimerdiff info matches 2000.. run scoreboard players set #t
 # Apply difference, clamp
 execute unless score #tagtimer info matches 0 run scoreboard players operation #tagtimer info -= #tagtimerdiff info
 execute if score #tagtimer info matches ..0 if score #tagstatus info matches 2 run function projektredstoneworld:rtctag/start
+execute if score #tagtimer info matches ..0 if score #tagstatus info matches 3 run tellraw @a [{"text":"[Tag] ","color":"#FF0055","bold":true},{"text":"The game's time limit has been reached! The runner(s) win!","bold":false}]
 execute if score #tagtimer info matches ..0 if score #tagstatus info matches 3 run function projektredstoneworld:rtctag/end
 execute if score #tagtimer info matches ..0 run scoreboard players set #tagtimer info 0
 # Display timer + Formatting
@@ -18,7 +19,7 @@ scoreboard players operation #tagtimersec info /= 1000 CONSTANTS
 scoreboard players operation #tagtimermin info = #tagtimersec info
 scoreboard players operation #tagtimermin info /= 60 CONSTANTS
 scoreboard players operation #tagtimersec info %= 60 CONSTANTS
-execute store result bossbar tagtimer value run scoreboard players get #tagtimer info
+execute if score #tagstatus info matches 2..3 store result bossbar tagtimer value run scoreboard players get #tagtimer info
 execute if score #tagstatus info matches 2 if score #tagtimersec info matches 10.. run bossbar set tagtimer name [{"text":"Head start: ","color":"#FFFF00"},{"score":{"name":"#tagtimermin","objective":"info"},"color":"#FFFF00","bold":true},{"text":":","bold":true},{"score":{"name":"#tagtimersec","objective":"info"},"color":"#FFFF00","bold":true}]
 execute if score #tagstatus info matches 2 if score #tagtimersec info matches ..9 run bossbar set tagtimer name [{"text":"Head start: ","color":"#FFFF00"},{"score":{"name":"#tagtimermin","objective":"info"},"color":"#FFFF00","bold":true},{"text":":0","bold":true},{"score":{"name":"#tagtimersec","objective":"info"},"color":"#FFFF00","bold":true}]
 execute if score #tagstatus info matches 3 if score #tagtimersec info matches 10.. run bossbar set tagtimer name [{"text":"Time remaining: ","color":"#FF0000"},{"score":{"name":"#tagtimermin","objective":"info"},"color":"#FF0000","bold":true},{"text":":","bold":true},{"score":{"name":"#tagtimersec","objective":"info"},"color":"#FF0000","bold":true}]
