@@ -14,14 +14,14 @@ tellraw @a [{"text":"[Tag] ","color":"#FF0055","bold":true},{"text":"The game wi
 execute store result score #tagneedchase info if entity @a[tag=wantchase]
 scoreboard players operation #tagneedchase info -= #tagchasers info
 execute if score #tagneedchase info matches ..0 run tag @a[tag=pontoka,tag=wantchase] add pontokachase
-execute if score #tagneedchase info matches -4 run tag @a[tag=pontoka,tag=!wantchase,limit=4] add pontokachase
-execute if score #tagneedchase info matches -3 run tag @a[tag=pontoka,tag=!wantchase,limit=3] add pontokachase
-execute if score #tagneedchase info matches -2 run tag @a[tag=pontoka,tag=!wantchase,limit=2] add pontokachase
-execute if score #tagneedchase info matches -1 run tag @a[tag=pontoka,tag=!wantchase,limit=1] add pontokachase
-execute if score #tagneedchase info matches 1.. if score #tagchasers info matches 1 run tag @a[tag=pontoka,tag=wantchase,limit=1] add pontokachase
-execute if score #tagneedchase info matches 1.. if score #tagchasers info matches 2 run tag @a[tag=pontoka,tag=wantchase,limit=2] add pontokachase
-execute if score #tagneedchase info matches 1.. if score #tagchasers info matches 3 run tag @a[tag=pontoka,tag=wantchase,limit=3] add pontokachase
-execute if score #tagneedchase info matches 1.. if score #tagchasers info matches 4 run tag @a[tag=pontoka,tag=wantchase,limit=4] add pontokachase
+execute if score #tagneedchase info matches -4 run tag @a[tag=pontoka,tag=!wantchase,limit=4,sort=random] add pontokachase
+execute if score #tagneedchase info matches -3 run tag @a[tag=pontoka,tag=!wantchase,limit=3,sort=random] add pontokachase
+execute if score #tagneedchase info matches -2 run tag @a[tag=pontoka,tag=!wantchase,limit=2,sort=random] add pontokachase
+execute if score #tagneedchase info matches -1 run tag @a[tag=pontoka,tag=!wantchase,limit=1,sort=random] add pontokachase
+execute if score #tagneedchase info matches 1.. if score #tagchasers info matches 1 run tag @a[tag=pontoka,tag=wantchase,limit=1,sort=random] add pontokachase
+execute if score #tagneedchase info matches 1.. if score #tagchasers info matches 2 run tag @a[tag=pontoka,tag=wantchase,limit=2,sort=random] add pontokachase
+execute if score #tagneedchase info matches 1.. if score #tagchasers info matches 3 run tag @a[tag=pontoka,tag=wantchase,limit=3,sort=random] add pontokachase
+execute if score #tagneedchase info matches 1.. if score #tagchasers info matches 4 run tag @a[tag=pontoka,tag=wantchase,limit=4,sort=random] add pontokachase
 
 tag @a[tag=pontoka,tag=!pontokachase] add pontokarun
 
