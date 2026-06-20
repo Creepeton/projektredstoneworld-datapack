@@ -17,3 +17,5 @@ tag @a remove pontokarun
 tag @a remove tagfirtcbound
 tag @a remove tagrtcbound
 tag @a remove tagrtc2bound
+
+tellraw @a [{"text":"[Tag] ","color":"#FF0055","bold":true},{"text":"The game has ended!","bold":false}]
