@@ -15,4 +15,4 @@ scoreboard players operation #pythagy info = #dy tagcoords
 scoreboard players operation #pythagz info = #dz tagcoords
 function projektredstoneworld:pythag
 
-execute if score #sqrtmod info matches ..9 run title @s actionbar [{"text":"Nearest player: ","color":"#00BBFF"},{"selector":"@a[tag=pontokanear]"},{"text":" - "},{"text":"X: "},{"score":{"name":"#nearx","objective":"tagcoords"}},{"text":" Y: "},{"score":{"name":"#nearx","objective":"tagcoords"}},{"text":" Z: "},{"score":{"name":"#nearx","objective":"tagcoords"}},{"text":" - Distance: "},{"score":{"name":"#sqrt","objective":"info"}}]
+execute if score #sqrtmod info matches ..9 run title @s actionbar [{"text":"Nearest player: ","color":"#00BBFF"},{"selector":"@a[tag=pontokanear]"},{"text":" - "},{"text":"X: "},{"score":{"name":"#nearx","objective":"tagcoords"}},{"text":" Y: "},{"score":{"name":"#neary","objective":"tagcoords"}},{"text":" Z: "},{"score":{"name":"#nearz","objective":"tagcoords"}},{"text":" - Distance: "},{"score":{"name":"#sqrt","objective":"info"}}]
