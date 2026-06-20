@@ -11,7 +11,7 @@ execute in overworld run tp @a[tag=pontoka] 286.5 4.0 654.5 0 0
 effect clear @a[tag=pontoka]
 
 tag @a remove pontoka
-tag @a remove pontokawantchase
+tag @a remove wantchase
 tag @a remove pontokachase
 tag @a remove pontokarun
 tag @a remove tagfirtcbound

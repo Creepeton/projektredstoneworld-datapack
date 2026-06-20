@@ -1,4 +1,5 @@
 execute if score #tagstatus info matches 0 run tellraw @a [{"text":"[Tag] ","bold":true,"color":"#FF0055"},{"text":"The game has been cancelled","bold":false,"color":"#FF0055"}]
+execute if score #tagstatus info matches 0 run function projektredstoneworld:rtctag/end
 execute if score #tagstatus info matches 2..3 run tellraw @a [{"text":"[Tag] ","bold":true,"color":"#FF0055"},{"text":"The game has already started","bold":false,"color":"#FF0055"}]
 execute unless score #tagstatus info matches 1 run return fail
 
