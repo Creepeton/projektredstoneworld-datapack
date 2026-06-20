@@ -35,5 +35,7 @@ effect give @a[tag=pontoka] saturation 100 100 true
 effect give @a[tag=pontokachase] strength 4 255 true
 
 tp @a[tag=pontokadead] 286.5 4.0 654.5 0 0
-tag @a[x=281,y=2,z=649,dx=11,dy=8,dz=21] remove pontokadead
+tag @a[x=281,y=2,z=649,dx=11,dy=8,dz=21,gamemode=survival] remove pontokadead
+gamemode @a[x=281,y=2,z=649,dx=11,dy=8,dz=21,tag=pontokadead] survival
+
 

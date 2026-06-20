@@ -10,7 +10,6 @@ execute if score #tagchasers info matches 0 if score #tagpcount info = #tagchase
 execute if score #tagchasers info matches 0 unless score #tagpcount info = #tagchasec info run tp @s @a[tag=pontokachase,limit=1,sort=random]
 execute if score #tagchasers info matches 0 run return fail
 # Not infection mode!
-execute in overworld run tp @s 286.5 4.0 654.5
 tag @s remove pontoka
 tag @s remove wantchase
 tag @s remove pontokachase
