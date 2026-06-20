@@ -1,9 +1,10 @@
 # Coord displays
 execute as @a[tag=pontoka] at @s if score #tagcoord info matches 1 run function projektredstoneworld:rtctag/coorddisp
 
-execute if score #tagstatus info matches ..2 run return fail
+execute if score #tagstatus info matches ..1 run return fail
 
-execute as @a run function projektredstoneworld:rtctag/bounds
+execute as @a[tag=pontokarun] run function projektredstoneworld:rtctag/bounds
+execute as @a[tag=pontokachase] if score #tagstatus info matches 3 run function projektredstoneworld:rtctag/bounds
 
 execute if score #tagbounds info matches 1 as @a[tag=!tagrtc2bound] run title @s title {"text":"You are out of bounds","color":"#FF0000"}
 execute if score #tagbounds info matches 2 as @a[tag=!tagrtcbound] run title @s title {"text":"You are out of bounds","color":"#FF0000"}
