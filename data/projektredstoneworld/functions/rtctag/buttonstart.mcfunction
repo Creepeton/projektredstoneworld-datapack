@@ -2,10 +2,10 @@ scoreboard players set #tagstatus info 1
 
 execute store result score #tagpcount info if entity @a[tag=pontoka]
 execute if score #tagchasers info matches 0 if score #tagpcount info matches ..2 run scoreboard players set #tagstatus info 0
-execute if score #tagchasers info matches 1 if score #tagpcount info matches ..2 run scoreboard players set #tagstatus info 0
-execute if score #tagchasers info matches 2 if score #tagpcount info matches ..3 run scoreboard players set #tagstatus info 0
-execute if score #tagchasers info matches 3 if score #tagpcount info matches ..4 run scoreboard players set #tagstatus info 0
-execute if score #tagchasers info matches 4 if score #tagpcount info matches ..5 run scoreboard players set #tagstatus info 0
+execute if score #tagchasers info matches 1 if score #tagpcount info matches ..1 run scoreboard players set #tagstatus info 0
+execute if score #tagchasers info matches 2 if score #tagpcount info matches ..2 run scoreboard players set #tagstatus info 0
+execute if score #tagchasers info matches 3 if score #tagpcount info matches ..3 run scoreboard players set #tagstatus info 0
+execute if score #tagchasers info matches 4 if score #tagpcount info matches ..4 run scoreboard players set #tagstatus info 0
 execute if score #tagstatus info matches 0 run tellraw @a [{"text":"[Tag] ","color":"#FF0055","bold":true},{"text":"Not enough players have joined to start the game! Either change the number of chasers (or game mode) or ask more people to play!","color":"#FF0055","bold":false}]
 execute if score #tagstatus info matches 0 run return fail
 
