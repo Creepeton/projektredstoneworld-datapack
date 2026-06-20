@@ -1,7 +1,7 @@
 # Coord displays
 execute as @a[tag=pontoka] at @s if score #tagcoord info matches 1 run function projektredstoneworld:rtctag/coorddisp
 
-execute if score #tagstatus info matches ..1 run return fail
+execute if score #tagstatus info matches ..2 run return fail
 
 execute as @a run function projektredstoneworld:rtctag/bounds
 
