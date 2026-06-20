@@ -7,7 +7,7 @@ execute as @a[tag=pontokarun] run function projektredstoneworld:rtctag/bounds
 execute as @a[tag=pontokachase] if score #tagstatus info matches 3 run function projektredstoneworld:rtctag/bounds
 tag @a remove pontokaskibidi
 execute unless score #tagstatus info matches 3 run tag @a[tag=pontokachase] add pontokaskibidi
-title @a[tag=!tagrtc2bound,tag=!pontokaskibidi] times 0 20 10
+title @a[tag=!tagrtc2bound,tag=!pontokaskibidi,tag=pontoka] times 0 20 10
 execute if score #tagbounds info matches 1 as @a[tag=!tagrtc2bound,tag=!pontokaskibidi,tag=pontoka] run title @s title {"text":"You are out of bounds","color":"#FF0000"}
 execute if score #tagbounds info matches 2 as @a[tag=!tagrtcbound,tag=!pontokaskibidi,tag=pontoka] run title @s title {"text":"You are out of bounds","color":"#FF0000"}
 execute if score #tagbounds info matches 3 as @a[tag=!tagfirtcbound,tag=!pontokaskibidi,tag=pontoka] run title @s title {"text":"You are out of bounds","color":"#FF0000"}
