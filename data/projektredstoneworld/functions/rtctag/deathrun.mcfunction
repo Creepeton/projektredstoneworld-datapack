@@ -18,6 +18,7 @@ tag @s remove pontokarun
 tag @s remove tagfirtcbound
 tag @s remove tagrtcbound
 tag @s remove tagrtc2bound
+tag @s add pontokadead
 tellraw @s "You have been caught, gg!"
 execute store result score #tagrunc info if entity @a[tag=pontokarun]
 execute if score #tagrunc info matches 0 run tellraw @a [{"text":"[Tag] ","color":"#FF0055","bold":true},{"text":"The runner(s) have been all caught! The chasers win!","bold":false}]
