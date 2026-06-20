@@ -11,8 +11,8 @@ scoreboard players operation #dy tagcoords -= #py tagcoords
 scoreboard players operation #dz tagcoords -= #pz tagcoords
 
 scoreboard players operation #pythagx info = #dx tagcoords
-scoreboard players operation #pythagy info = #dx tagcoords
-scoreboard players operation #pythagz info = #dx tagcoords
+scoreboard players operation #pythagy info = #dy tagcoords
+scoreboard players operation #pythagz info = #dz tagcoords
 function projektredstoneworld:pythag
 
 scoreboard players operation #sqrtmod info = #sqrt info
