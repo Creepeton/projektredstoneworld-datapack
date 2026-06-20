@@ -1,4 +1,4 @@
-execute if score #tagbounds info matches 3 run tellraw @a [{"text":"[Tag] ","color":"#FF0055","bold":true},{"selector":"@s","bold":false},{"text":" has died! Laugh at this user.","color":"#FF0055","bold":true}]
+execute if score #tagbounds info matches 3 run tellraw @a [{"text":"[Tag] ","color":"#FF0055","bold":true},{"selector":"@s","bold":false},{"text":" has died! Laugh at this user.","color":"#FF0055","bold":false}]
 execute if score #tagbounds info matches 3 run scoreboard players set @s tagdeathrip 0
 execute if score #tagbounds info matches 3 run return fail
 
