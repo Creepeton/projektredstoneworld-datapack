@@ -27,7 +27,7 @@ execute if score #tagstatus info matches 3 if score #tagtimersec info matches ..
 
 # Effects
 effect clear @a[tag=pontoka]
-effect give @a[tag=pontoka] glowing 4 0 true
+effect give @a[tag=pontoka] glowing 10 100 true
 effect give @a[tag=pontoka] regeneration 4 4 true
-effect give @a[tag=pontoka] saturation 4 0 true
+effect give @a[tag=pontoka] saturation 10 100 true
 effect give @a[tag=pontokachase] strength 4 255 true

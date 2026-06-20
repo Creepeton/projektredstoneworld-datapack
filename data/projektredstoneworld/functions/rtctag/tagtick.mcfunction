@@ -16,4 +16,4 @@ execute if score #tagbound info matches -1 if score #tagchasec info matches 1 as
 execute if score #tagbound info matches -1 if score #tagchasec info matches 2.. as @a[tag=!tagrtcbound] run damage @s 5 out_of_world
 
 # Coord displays
-execute as @a[tag=pontoka] if score #tagcoord info matches 1 run function projektredstoneworld:rtctag/coorddisp
+execute as @a[tag=pontoka] at @s if score #tagcoord info matches 1 run function projektredstoneworld:rtctag/coorddisp
