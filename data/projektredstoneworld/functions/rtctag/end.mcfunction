@@ -24,5 +24,3 @@ tellraw @a [{"text":"[Tag] ","color":"#FF0055","bold":true},{"text":"The game ha
 scoreboard objectives remove tagdeathrip
 
 gamemode survival @a[tag=pontoka]
-
-schedule function projektredstoneworld:rtctag/ensureplayerpos 10t

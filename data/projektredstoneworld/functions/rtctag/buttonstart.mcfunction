@@ -36,3 +36,4 @@ execute if score #tagchasers info matches 2.. run tellraw @a [{"text":"[Tag] ","
 scoreboard players set #tagstatus info -1
 
 gamemode adventure @a[tag=pontoka]
+tag @a remove pontokadead
