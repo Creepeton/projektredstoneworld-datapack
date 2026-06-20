@@ -8,4 +8,5 @@ tag @s remove pontokachase
 tag @s remove pontokarun
 tag @s remove pontokawantchase
 effect clear @s
+gamemode survival @s
 bossbar set tagtimer players @a[tag=pontoka]
