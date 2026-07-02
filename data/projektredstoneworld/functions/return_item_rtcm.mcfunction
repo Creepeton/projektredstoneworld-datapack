@@ -8,7 +8,7 @@ data merge block ~ ~ ~ {Items:[]}
 data modify block ~ ~ ~ Items append from entity @s data.Inventory[0]
 
 # give player the item based the slot number
-execute as @a[tag=rtcmrestoretarget] run function projektredstoneworld:give_correct_slotrtcm
+execute as @a[tag=restoretargetrtcm] run function projektredstoneworld:give_correct_slotrtcm
 
 # remove item data from entity
 data remove entity @s data.Inventory[0]
