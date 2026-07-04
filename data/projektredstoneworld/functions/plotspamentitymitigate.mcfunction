@@ -21,4 +21,5 @@ execute in plotworld as @a[x=0] at @s as @e[type=!player,type=!marker,distance=.
 
 execute in plotworld if entity @a[tag=spammerdetected2,x=0] in overworld run setblock -257 44 391 minecraft:redstone_block
 
+execute in plotworld as @a[x=0] at @s as @e[type=!player,type=!marker,distance=..20] at @s if score @s plotentityspamcheck matches 50.. run data modify entity @s DeathLootTable set value "minecraft:empty"
 execute in plotworld as @a[x=0] at @s as @e[type=!player,type=!marker,distance=..20] at @s if score @s plotentityspamcheck matches 50.. run kill @s
