@@ -3,5 +3,5 @@
 # Each boater must be given the tag iceboat_time_tracked before starting the race and (therefore) its timer
 
 scoreboard players add @a[tag=iceboat_time_tracked] iceboat_tick 1
-scoreboard players operation @a[tag=iceboattimerunning] iceboat_time = @a[tag=iceboat_time_tracked] iceboat_tick
-scoreboard players operation @a[tag=iceboattimerunning] iceboat_time /= 20 CONSTANTS
+execute as @a[tag=iceboat_time_tracked] run scoreboard players operation @s iceboat_time = @s iceboat_tick
+execute as @a[tag=iceboat_time_tracked] run scoreboard players operation @s iceboat_time /= 20 CONSTANTS
