@@ -59,7 +59,7 @@ jobs:
 
           if [ "$EVENT" = "workflow_run" ]; then
             STATUS="$WORKFLOW_STATUS"
-            URL="$WORKFLOW_URL"
+            URL="${WORKFLOW_URL:-https://github.com/${REPO}}"
 
             if [ "$STATUS" = "success" ]; then
               COLOR=5763719
@@ -71,7 +71,7 @@ jobs:
               TITLE="🔥 Datapack Deployment Failed!"
               DESC=$'Status: '"$STATUS"$''
             fi
-
+          
           elif [ "$EVENT" = "push" ]; then
             BEFORE="${{ github.event.before }}"
             AFTER="${{ github.event.after }}"
