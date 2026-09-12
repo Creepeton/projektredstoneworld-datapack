@@ -121,7 +121,7 @@ jobs:
 
             URL="${COMMIT_URL:-https://github.com/${REPO}}"
 
-          elif [ "$EVENT" = "pull_request" ]; then
+          elif [ "$EVENT" = "pull_request_target" ]; then
             TITLE="🔀 Pull Request ${ACTION:-unknown}"
             DESC="${PR_TITLE:-Pull Request}"
             URL="${PR_URL:-https://github.com/${REPO}}"
