@@ -4,7 +4,7 @@ scoreboard players add @a iceboat_position 1
 
 # Obligatory loser message
 tag @p[tag=iceboat_time_tracked] add iceboat_mightve_lost
-execute as @p[tag=iceboat_time_tracked] if entity @p[tag=iceboat_time_tracked, tag=!iceboat_mightve_lost] run function projektredstoneworld:iceboatplayernotloser
+execute as @p[tag=iceboat_time_tracked] if entity @p[tag=iceboat_time_tracked, tag=!iceboat_mightve_lost] run function projektredstoneworld:rtciceboat/iceboatplayernotloser
 execute as @p[tag=iceboat_time_tracked] unless entity @p[tag=iceboat_time_tracked, tag=!iceboat_mightve_lost] run tellraw @a [{"text":"[IceBoat] ","color":"dark_aqua"},{"selector":"@p[tag=iceboat_time_tracked]"},{"text":" has finished the track in LAST PLACE in roughly "},{"score":{"name":"@s","objective":"iceboat_time"}}, {"text":" seconds! (exactly "},{"score":{"name":"@s","objective":"iceboat_tick"}},{"text":" ticks). What a loser!"}]
 tag @a[tag=iceboat_mightve_lost] remove iceboat_mightve_lost
 
