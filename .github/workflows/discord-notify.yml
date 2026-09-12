@@ -125,7 +125,7 @@ jobs:
             TITLE="🔀 Pull Request ${ACTION:-unknown}"
             DESC="${PR_TITLE:-Pull Request}"
             URL="${PR_URL:-https://github.com/${REPO}}"
-            CONTENT="<@&1507221840987426827> New datapack PR!"
+            CONTENT="<@&1507221840987426827> Datapack PR: ${ACTION:-unknown}"
 
           elif [ "$EVENT" = "issues" ]; then
             TITLE="🐛 Issue ${ACTION:-unknown}"
