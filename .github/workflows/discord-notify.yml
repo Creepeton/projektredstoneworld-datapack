@@ -78,11 +78,12 @@ jobs:
               COLOR=5763719
               TITLE="🚀 Datapack Deployment Succeeded"
               DESC=$'Run /minecraft:reload ingame to apply changes.'
-              CONTENT="<@&1507221840987426827>"
+              CONTENT="<@&1507221840987426827> Deployment success"
             else
               COLOR=15548997
               TITLE="🔥 Datapack Deployment Failed!"
               DESC=$'Status: '"$STATUS"$''
+              CONTENT="<@&1507221840987426827> Deployment failure! Laugh at this user! Pontoka in my boka!"
             fi
 
           elif [ "$EVENT" = "push" ]; then
@@ -112,6 +113,7 @@ jobs:
             TITLE="🔀 Pull Request ${ACTION:-unknown}"
             DESC="${PR_TITLE:-Pull Request}"
             URL="${PR_URL:-https://github.com/${REPO}}"
+            CONTENT="<@&1507221840987426827> New datapack PR!"
 
           elif [ "$EVENT" = "issues" ]; then
             TITLE="🐛 Issue ${ACTION:-unknown}"
