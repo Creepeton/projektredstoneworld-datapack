@@ -132,14 +132,14 @@ jobs:
             --arg time "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
             --argjson color "$COLOR" \
             '{
-              content: $content,
+              content: ($content | select(length > 0) // empty),
               allowed_mentions: {
                 roles: ["1507221840987426827"]
               },
               embeds: [{
                 title: $title,
                 description: $desc,
-                url: $url,
+                url: ($url | select(. != "" and . != null) // "https://github.com"),
                 color: $color,
                 footer: { text: $repo },
                 author: { name: $actor, icon_url: $avatar },
@@ -149,4 +149,4 @@ jobs:
           | curl \
               -H "Content-Type: application/json" \
               -d @- \
-              "$WEBHOOK"
+              "${WEBHOOK}"
