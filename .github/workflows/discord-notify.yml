@@ -140,7 +140,7 @@ jobs:
           echo "Event: $EVENT | Title: $TITLE | URL: $URL"
 
           # Ensure webhook is set
-          if [ -z "${{ secrets.DISCORD_WEBHOOK_URL }}" ]; then
+          if [ -z "$WEBHOOK" ]; then
             echo "Warning: DISCORD_WEBHOOK_URL not configured"
             exit 0
           fi
@@ -173,4 +173,4 @@ jobs:
           | curl \
               -H "Content-Type: application/json" \
               -d @- \
-              "${{ secrets.DISCORD_WEBHOOK_URL }}"
+              "$WEBHOOK"
