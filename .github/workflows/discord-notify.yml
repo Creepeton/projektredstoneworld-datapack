@@ -69,6 +69,12 @@ jobs:
           WORKFLOW_STATUS="${{ github.event.workflow_run.conclusion }}"
           WORKFLOW_URL="${{ github.event.workflow_run.html_url }}"
           ACTION="${{ github.event.action }}"
+          
+          if [ -n "$WEBHOOK" ]; then
+            echo "Webhook secret IS available"
+          else
+            echo "Webhook secret IS NOT available"
+          fi
 
           if [ "$EVENT" = "workflow_run" ]; then
             STATUS="${WORKFLOW_STATUS:-unknown}"
