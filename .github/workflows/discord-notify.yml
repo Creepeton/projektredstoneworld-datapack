@@ -157,32 +157,58 @@ jobs:
             exit 0
           fi
 
-          jq -n \
-            --arg title "$TITLE" \
-            --arg desc "$DESC" \
-            --arg content "$CONTENT" \
-            --arg url "$URL" \
-            --arg actor "$ACTOR" \
-            --arg avatar "$AVATAR" \
-            --arg repo "$REPO" \
-            --arg time "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
-            --argjson color "$COLOR" \
-            '{
-              content: $content,
-              allowed_mentions: {
-                roles: ["1507221840987426827"]
-              },
-              embeds: [{
-                title: $title,
-                description: $desc,
-                url: $url,
-                color: $color,
-                footer: { text: $repo },
-                author: { name: $actor, icon_url: $avatar },
-                timestamp: $time
-              }]
-            }' \
-          | curl \
-              -H "Content-Type: application/json" \
-              -d @- \
-              "$WEBHOOK"
+          # Send webhook with retry logic
+          MAX_RETRIES=3
+          RETRY_DELAY=2
+          
+          send_webhook() {
+            local attempt=1
+            while [ $attempt -le $MAX_RETRIES ]; do
+              if jq -n \
+                --arg title "$TITLE" \
+                --arg desc "$DESC" \
+                --arg content "$CONTENT" \
+                --arg url "$URL" \
+                --arg actor "$ACTOR" \
+                --arg avatar "$AVATAR" \
+                --arg repo "$REPO" \
+                --arg time "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+                --argjson color "$COLOR" \
+                '{
+                  content: $content,
+                  allowed_mentions: {
+                    roles: ["1507221840987426827"]
+                  },
+                  embeds: [{
+                    title: $title,
+                    description: $desc,
+                    url: $url,
+                    color: $color,
+                    footer: { text: $repo },
+                    author: { name: $actor, icon_url: $avatar },
+                    timestamp: $time
+                  }]
+                }' \
+              | curl \
+                  -H "Content-Type: application/json" \
+                  -d @- \
+                  --max-time 10 \
+                  --connect-timeout 5 \
+                  "$WEBHOOK"; then
+                echo "Webhook sent successfully"
+                return 0
+              fi
+              
+              if [ $attempt -lt $MAX_RETRIES ]; then
+                echo "Webhook send failed, retrying in ${RETRY_DELAY}s (attempt $attempt/$MAX_RETRIES)"
+                sleep $RETRY_DELAY
+              fi
+              
+              attempt=$((attempt + 1))
+            done
+            
+            echo "Failed to send webhook after $MAX_RETRIES attempts"
+            return 1
+          }
+          
+          send_webhook || true
