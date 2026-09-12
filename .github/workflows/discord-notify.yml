@@ -76,6 +76,12 @@ jobs:
             echo "Webhook secret IS NOT available"
           fi
 
+          # Debug
+          echo "Base repo: ${{ github.event.pull_request.base.repo.full_name }}"
+          echo "Head repo: ${{ github.event.pull_request.head.repo.full_name }}"
+          echo "Base branch: ${{ github.event.pull_request.base.ref }}"
+          echo "Head branch: ${{ github.event.pull_request.head.ref }}"
+
           if [ "$EVENT" = "workflow_run" ]; then
             STATUS="${WORKFLOW_STATUS:-unknown}"
             URL="${WORKFLOW_URL:-https://github.com/${REPO}}"
