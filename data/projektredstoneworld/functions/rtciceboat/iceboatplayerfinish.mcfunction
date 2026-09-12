@@ -15,4 +15,4 @@ execute unless entity @a[tag=iceboat_time_tracked, tag=!iceboat_finished] run ta
 scoreboard players reset @p[tag=iceboat_time_tracked] iceboat_tick
 scoreboard players reset @p[tag=iceboat_time_tracked] iceboat_time
 tag @p[tag=iceboat_time_tracked] remove iceboat_time_tracked
-execute unless entity @a[tag=iceboat_time_tracked] run scoreboard players set @a[tag=iceboat_time_tracked] iceboat_position 0
+execute unless entity @a[tag=iceboat_time_tracked] run scoreboard players set @a iceboat_position 0
